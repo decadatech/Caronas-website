@@ -1,0 +1,50 @@
+@media only screen and (max-width: 700px) {
+  
+  .banner{
+      margin-bottom: 20px;
+  }
+    .banner h1{
+       font-size: 35px;
+       text-align: center;
+       margin: 0 20px 20px 20px;
+   }
+   
+    .banner form{
+        flex-direction: column;
+    }
+
+    .banner form input.first-input{
+        border-radius: 12px 12px 0 0;
+    }
+
+    .banner form button{
+        width: 300px;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .planos{
+        flex-direction: column;
+    }
+
+    .planos .plano{
+        margin-top: 10px;
+    }
+
+    .blue .content{
+        flex-direction: column;
+    }
+
+    .sua-viagem{
+        flex-direction: column;
+    }
+
+    .sua-viagem img{
+        width: 70%;
+    }
+
+    .sua-viagem div{
+        margin: 0 40px 40px 40px;
+    }
+}
+
+

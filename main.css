@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap");
+
+body {
+  overflow-x: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Roboto", sans-serif;
+  background-color: #f1f1f5;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 100%;
+  background-image: url(/img/banner2.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.banner h1{
+  color: white;
+  font-size: 55px;
+  font-weight: 600;
+  text-shadow: 0px 0px 14px rgba(10, 10, 10, 1);
+}
+
+.banner form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.banner form input {
+  height: 48px;
+  border: 0;
+  font-size: 18px;
+}
+
+.banner form input.first-input {
+  border-radius: 12px 0 0 12px;
+}
+
+.banner form input.date {
+  height: 50px;
+  color: #626262;
+}
+
+.banner form button {
+  height: 50px;
+  width: 50px;
+  border-radius: 0 12px 12px 0;
+  border: 0;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  transition: 400ms;
+}
+
+.banner form button img {
+  width: 20px;
+}
+
+.banner form button:hover {
+  background-color: rgb(1, 115, 223);
+}
+
+.planos{
+  display: flex;
+}
+
+.planos .plano{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin: 120px 30px 30px 30px;
+  border-radius: 8px;
+  transition: 500ms;
+  box-shadow: 0px 0px 54px -22px rgba(84,84,84,1);
+  padding: 20px;
+}
+
+.planos .plano img{
+  width: 80%;
+}
+
+.planos .plano button{
+  background-color:  rgb(0, 132, 255);
+  border: 0;
+  border-radius: 24px;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  font-size: 16px;
+  transition: 400ms;
+}
+
+.planos .plano button:hover{
+  background-color:rgb(1, 115, 223);
+}
+
+a.ver-planos{
+  float: right;
+  text-decoration: none;
+  color:  rgb(0, 132, 255);
+  font-weight: 600;
+  margin-right: 40px;
+  font-size: 18px;
+}
+
+.blue{
+  background-color: rgb(0, 132, 255);
+  margin: 100px 0 0 0;
+  padding: 50px;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 0px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  margin-top: 46px;
+  margin-bottom: 20px;
+}
+
+.texts h1{
+  font-size: 42px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .item {
+  display: flex;
+  background-color: #f1f1f5;
+  border-radius: 6px;
+  margin: 20px;
+  font-family: "Roboto", sans-serif;
+  color:  rgb(71, 71, 71);
+  padding: 10px;
+  transition: 400ms;
+}
+
+.content .item:hover{
+  background-color: #e2e2e2;
+}
+
+.content .item h4, h5 {
+    margin: 10px;
+}
+
+.content .item h5{
+  color: rgb(0, 132, 255);
+  margin-top: 12px;
+}
+
+.content .item a{
+  display: flex;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .item a img{
+  width: 50%;
+}
+
+.sua-viagem{
+  display: flex;
+  margin: 100px 0 0 0;
+
+}
+
+.sua-viagem img{
+  width: 35%;
+  margin: 0 50px 50px 50px;
+}
+
+.sua-viagem div button{
+  background-color: rgb(0, 132, 255);
+  color: white;
+  border-radius: 24px;
+  border: 0;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 14px;
+}

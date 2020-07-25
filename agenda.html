@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agendar</title>
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="responsive.css">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="agenda.css">
+        <link rel='stylesheet' type='text/css' href='fullcalendar.css'/>
+        <script type='text/javascript' src='jquery.js'></script>
+        <script type='text/javascript' src='fullcalendar.js'></script>
+
+        <script>
+            $(document).ready($(function () {
+                // page is now ready, initialize the calendar...
+                $('#calendar').fullCalendar({
+                    // put your options and callbacks here
+                })
+            }););
+        </script>
+
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <a href="index.html">
+                    <li>Voltar</li>
+                </a>
+            </ul>
+        </nav>
+
+        <div id='calendar'></div>
+
+    </body>
+</html>
