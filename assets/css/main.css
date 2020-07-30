@@ -20,7 +20,7 @@ button:focus {
   justify-content: center;
   height: 500px;
   width: 100%;
-  background-image: url(/assets/img/banner2.png);
+  background-image: url(../img/banner2.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
