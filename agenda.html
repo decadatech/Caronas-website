@@ -3,24 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Agendar</title>
+
         <link rel="stylesheet" href="assets/css/footer.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
         <link rel="stylesheet" href="assets/css/nav.css">
         <link rel="stylesheet" href="assets/css/agenda.css">
-        <link rel='stylesheet' type='text/css' href='assets/css/fullcalendar.css'/>
-        <script type='text/javascript' src='assets/js/jquery.js'></script>
-        <script type='text/javascript' src='assets/js/fullcalendar.js'></script>
-
-        <!-- <script>
-            $(document).ready($(function () {
-                // page is now ready, initialize the calendar...
-                $('#calendar').fullCalendar({
-                    // put your options and callbacks here
-                })
-            }););
-        </script> -->
-
+        
+        <!-- FULLCALENDAR CSS -->
+        <link href="assets/libs/fullcalendar-4.3.1/packages/core/main.css" rel="stylesheet" />
+        <link href="assets/libs/fullcalendar-4.3.1/packages/timegrid/main.css" rel="stylesheet" />
+        <link href="assets/libs/fullcalendar-4.3.1/packages/list/main.css" rel="stylesheet" />
+        
+        <title>Agendar</title>
     </head>
     <body>
         <nav>
@@ -31,7 +25,29 @@
             </ul>
         </nav>
 
-        <div id='calendar'></div>
+        <div class="container">
+            <div style="margin: 20px;" id="calendar"></div>
+        </div>
 
+
+        <!-- Modal content -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>          
+        </div>
+
+        <!--FULLCALENDAR JS-->
+        <script src='assets/libs/fullcalendar-4.3.1/packages/core/main.js'></script>
+        <script src='assets/libs/fullcalendar-4.3.1/packages/interaction/main.js'></script>
+        <script src='assets/libs/fullcalendar-4.3.1/packages/daygrid/main.js'></script>
+        <script src='assets/libs/fullcalendar-4.3.1/packages/timegrid/main.js'></script>
+        <script src='assets/libs/fullcalendar-4.3.1/packages/list/main.js'></script>
+        <script src="assets/libs/fullcalendar-4.3.1/packages/core/locales/pt-br.js"></script>
+        <!--MomentJS-->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js'></script>
+
+        <script src="assets/js/agenda.functions.js"></script>
     </body>
 </html>
