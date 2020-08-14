@@ -6,6 +6,25 @@ body{
     background-color: #f1f1f5;
 }
 
+/*  AJUSTES DO MAIN.CSS E FOOTER.CSS POR CONTA DO BOOTSTRAP  */
+
+.banner form input.date {
+    height: 48px;
+    color: #626262;
+  }
+
+  .bottom-footer{
+    background-color: rgb(146, 146, 146);
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0;
+  }
+
+  footer{
+      padding-top: 20px;
+      height: 170px;
+  }
+
 
 
 
