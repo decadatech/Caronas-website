@@ -5,7 +5,7 @@ const calendarEl = document.getElementById('calendar');
 
 const calendar = new FullCalendar.Calendar(calendarEl, {
     plugins: ['interaction', 'dayGrid', 'timeGrid'],
-    defaultView: 'dayGridWeek',
+    defaultView: $(window).width() < 765 ? 'dayGridDay':'dayGridWeek',
     header: {
         left: 'prev,next,today',
         right: 'title',
@@ -82,5 +82,15 @@ $("select[name='estado1']").change(function () {
 
     } else {
         $("select[name='cidade1']").html('<option value="" id="selecionar1">Selecione um estado</option>');
+    }
+});
+
+$("#quantity").keyup(function () {
+    if($("#quantity").val() == 7){
+        $("#quantity").val('');
+    } else if($("#quantity").val() == 8){
+        $("#quantity").val('');
+    } else if($("#quantity").val() == 9){
+        $("#quantity").val('');
     }
 });
