@@ -8,8 +8,8 @@ body {
   background-color: #f1f1f5;
 }
 
-input:focus,
-button:focus {
+input,
+button {
   outline: none;
 }
 
@@ -26,20 +26,21 @@ button:focus {
   background-repeat: no-repeat;
 }
 
-.banner h1{
+.banner h1 {
   color: white;
   font-size: 55px;
   font-weight: 600;
   text-shadow: 0px 0px 14px rgba(10, 10, 10, 1);
+  margin-bottom: 28px;
 }
 
 .banner form {
   display: flex;
-  margin-top: 10px;
+  overflow: hidden;  
 }
 
 .banner form input {
-  height: 48px;
+  height: 100%;
   border: 0;
   font-size: 18px;
 }
@@ -49,7 +50,7 @@ button:focus {
 }
 
 .banner form input.date {
-  height: 50px;
+  /* height: 50px; */
   color: #626262;
 }
 
@@ -71,11 +72,11 @@ button:focus {
   background-color: rgb(1, 115, 223);
 }
 
-.planos{
+.planos {
   display: flex;
 }
 
-.planos .plano{
+.planos .plano {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,11 +89,19 @@ button:focus {
   padding: 20px;
 }
 
-.planos .plano img{
+.planos .plano h4 {
+  margin-bottom: 16px;
+}
+
+.planos .plano img {
   width: 80%;
 }
 
-.planos .plano button{
+.planos .plano p {
+  margin: 16px auto;
+}
+
+.planos .plano button {
   background-color:  rgb(0, 132, 255);
   border: 0;
   border-radius: 24px;
@@ -100,13 +109,14 @@ button:focus {
   padding: 10px 20px 10px 20px;
   font-size: 16px;
   transition: 400ms;
+  cursor: pointer;
 }
 
-.planos .plano button:hover{
+.planos .plano button:hover {
   background-color:rgb(1, 115, 223);
 }
 
-a.ver-planos{
+a.ver-planos {
   float: right;
   text-decoration: none;
   color:  rgb(0, 132, 255);
@@ -115,7 +125,7 @@ a.ver-planos{
   font-size: 18px;
 }
 
-.blue{
+.blue {
   background-color: rgb(0, 132, 255);
   margin: 100px 0 0 0;
   padding: 50px;
@@ -159,7 +169,7 @@ a.ver-planos{
 }
 
 .content .item h4, h5 {
-    margin: 10px;
+  margin: 10px;    
 }
 
 .content .item h5{
@@ -174,27 +184,35 @@ a.ver-planos{
   justify-content: center;
 }
 
-.content .item a img{
+.content .item a img {
   width: 50%;
 }
 
-.sua-viagem{
+.sua-viagem {
   display: flex;
   margin: 100px 0 0 0;
 
 }
 
-.sua-viagem img{
+.sua-viagem img {
   width: 35%;
   margin: 0 50px 50px 50px;
 }
 
-.sua-viagem div button{
+.sua-viagem div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+.sua-viagem div button {
   background-color: rgb(0, 132, 255);
+  max-width: 200px;
   color: white;
   border-radius: 24px;
   border: 0;
   padding: 15px;
   font-weight: 600;
   font-size: 14px;
+  cursor: pointer;
 }

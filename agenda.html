@@ -1,183 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="stylesheet" href="assets/css/footer.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        <link rel="stylesheet" href="assets/css/nav.css">
-        <link rel="stylesheet" href="assets/css/agenda.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
-        
-        <!-- FULLCALENDAR CSS -->
-        <link href="assets/libs/fullcalendar-4.3.1/packages/core/main.css" rel="stylesheet" />
-        <link href="assets/libs/fullcalendar-4.3.1/packages/timegrid/main.css" rel="stylesheet" />
-        <link href="assets/libs/fullcalendar-4.3.1/packages/list/main.css" rel="stylesheet" />
-        
-        <title>Agendar</title>
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <a href="#"><li>Conheça os Planos</li></a>
-            </ul>
-        </nav>
-    
-        <div class="banner">
-            <h1>Caronas de Confiança para o seu Destino</h1>
-            <form action="">
-                <input type="text" placeholder=" Saindo de..." class="first-input">
-                <input type="text" placeholder=" Indo para...">
-                <input type="date" class="date">
-                <input type="number" placeholder=" Passageiros">
-                <button><img src="assets/img/search.svg" alt=""></button>
-            </form>
-        </div>
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/agenda.css">  
+  
+  <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
 
-        <section class="blue">
-            <div class="texts">
-                <h1>Faça seu agendamento</h1>
-                <h3>Clique no dia correspondente à sua viagem e envie suas informações</h3>
-            </div>            
-        </section>
+  <!-- FULLCALENDAR CSS -->
+  <link href="assets/libs/fullcalendar-4.3.1/packages/core/main.css" rel="stylesheet" />
+  <link href="assets/libs/fullcalendar-4.3.1/packages/timegrid/main.css" rel="stylesheet" />
+  <link href="assets/libs/fullcalendar-4.3.1/packages/list/main.css" rel="stylesheet" />
 
-        <div class="container">            
-            <div style="margin: 20px; height: 10%;" id="calendar"></div>
-        </div>       
+  <title>Agendar</title>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <a href="#">
+        <li>Conheça os Planos</li>
+      </a>
+    </ul>
+  </nav>
+
+  <div class="banner">
+    <h1>Caronas de Confiança para o seu Destino</h1>
+
+    <form action="">
+      <input type="text" placeholder=" Saindo de..." class="first-input">
+      <input type="text" placeholder=" Indo para...">
+      <input type="date" class="date">
+      <input type="number" placeholder=" Passageiros">
       
+      <button>
+        <img src="assets/img/search.svg" alt="">
+      </button>
+    </form>
+  </div>
 
-        <footer>
-            <ul>
-                <li><a href="#">Quem Somos</a></li>
-                <li><a href="#">Perguntas Frequentes</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </footer>
-    
-        <div class="bottom-footer">
-            <p>Copyright © 2020 by Decada Technology</p>
+  <section class="blue">
+    <div class="texts">
+      <h1>Faça seu agendamento</h1>
+
+      <h3>Clique no dia correspondente à sua viagem e envie suas informações</h3>
+    </div>
+  </section>
+
+  <div class="container calendar-container">
+    <div id="calendar"></div>
+
+    <button type="button" id="schedule">Agendar viagem</button>
+  </div>
+
+  <footer>
+    <ul>
+      <li><a href="#">Quem Somos</a></li>
+      <li><a href="#">Perguntas Frequentes</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </footer>
+
+  <div class="bottom-footer">
+    <p>Copyright © 2020 by Decada Technology</p>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">Agendar Viagem</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-
-        <!-- MODAL -->
-        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog"
-        aria-labelledby="ModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="ModalLabel">Agendar Viagem</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <form id="scheduleForm" method="POST" action="">
-                        <div class="modal-body">
-                            <div class="form-row">
-                                <div class="form-group col-md-2">
-                                    <b>Saída</b>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label>Estado</label>
-                                    <select  class="form-control" name="estado0"
-                                        id="estado0" required>
-                                        <option value="0">–  –</option>
-                                        <option data-id="35" value="SP" >SP</option>
-                                        <option data-id="31" value="MG" >MG</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Cidade</label>
-                                    <select  class="form-control" name="cidade0"
-                                        id="cidade0" required>
-                                        <option value="" id="selecionar0">Selecione um estado</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-2">
-                                    <b>Para</b>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label>Estado</label>
-                                    <select  class="form-control" name="estado1"
-                                        id="estado1" required>
-                                        <option value="0">–  –</option>
-                                        <option data-id="35" value="SP" >SP</option>
-                                        <option data-id="31" value="MG" >MG</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Cidade</label>
-                                    <select  class="form-control" name="cidade1"
-                                        id="cidade1" required>
-                                        <option value="" id="selecionar1">Selecione um estado</option>
-                                    </select>
-                                </div>
-                            </div>    
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label>Telefone</label>
-                                    <input type="tel" class="form-control" name="phone"
-                                        id="phone" required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Saída</label>
-                                    <input type="text" class="form-control" name="end"
-                                        id="end" autocomplete="off"
-                                        placeholder="00/00/0000 00:00" required>
-                                </div>                          
-                            </div>   
-                            <div class="form-row">
-                                <label>Quantidade de Passageiros (1 à 6)</label>
-                                <div class="form-group col-md-3">
-                                    <input type="text" maxlength="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="quantity"
-                                        id="quantity"required>
-                                </div>
-                            </div> 
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label>E-mail</label>
-                                    <input type="text" class="form-control" name="email"
-                                        id="email"required>
-                                </div>
-                            </div>                             
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <textarea type="text" class="form-control"
-                                        name="description" id="description" placeholder="Observações"></textarea>
-                                </div>
-                            </div>                     
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-success save">Enviar</button>
-                            <button type="button" class="btn btn-secondary"
-                                data-dismiss="modal">Fechar</button>
-                        </div>
-                    </form>
-                </div>
+        <form id="scheduleForm" method="POST" action="">
+          <div class="modal-body">
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <b>Saída</b>
+              </div>
+              <div class="form-group col-md-3">
+                <label>Estado</label>
+                <select class="form-control" name="estado0" id="estado0" required>
+                  <option value="0">– –</option>
+                  <option data-id="35" value="SP">SP</option>
+                  <option data-id="31" value="MG">MG</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Cidade</label>
+                <select class="form-control" name="cidade0" id="cidade0" required>
+                  <option value="" id="selecionar0">Selecione um estado</option>
+                </select>
+              </div>
             </div>
-        </div>
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <b>Para</b>
+              </div>
+              <div class="form-group col-md-3">
+                <label>Estado</label>
+                <select class="form-control" name="estado1" id="estado1" required>
+                  <option value="0">– –</option>
+                  <option data-id="35" value="SP">SP</option>
+                  <option data-id="31" value="MG">MG</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Cidade</label>
+                <select class="form-control" name="cidade1" id="cidade1" required>
+                  <option value="" id="selecionar1">Selecione um estado</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Telefone</label>
+                <input type="tel" class="form-control" name="phone" id="phone" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Saída</label>
+                <input type="text" class="form-control" name="end" id="end" autocomplete="off"
+                  placeholder="00/00/0000 00:00" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <label>Quantidade de Passageiros (1 à 6)</label>
+              <div class="form-group col-md-3">
+                <input type="text" maxlength="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+                  class="form-control" name="quantity" id="quantity" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label>E-mail</label>
+                <input type="text" class="form-control" name="email" id="email" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <textarea type="text" class="form-control" name="description" id="description"
+                  placeholder="Observações"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success save">Enviar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
-      
-        <!-- JQUERY -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <!-- Bootstrap JS CDN -->
-        <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
-        <!-- JQUERY MASK -->
-        <script src="assets/libs/jquery.mask.js"></script>
-        <!--FULLCALENDAR JS-->
-        <script src='assets/libs/fullcalendar-4.3.1/packages/core/main.js'></script>
-        <script src='assets/libs/fullcalendar-4.3.1/packages/interaction/main.js'></script>
-        <script src='assets/libs/fullcalendar-4.3.1/packages/daygrid/main.js'></script>
-        <script src='assets/libs/fullcalendar-4.3.1/packages/timegrid/main.js'></script>
-        <script src='assets/libs/fullcalendar-4.3.1/packages/list/main.js'></script>
-        <script src="assets/libs/fullcalendar-4.3.1/packages/core/locales/pt-br.js"></script>
-        <!--MomentJS-->
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js'></script>
 
-        <script src="assets/js/agenda.functions.js"></script>
-    </body>
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- Bootstrap JS CDN -->
+  <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+  <!-- JQUERY MASK -->
+  <script src="assets/libs/jquery.mask.js"></script>
+  <!--FULLCALENDAR JS-->
+  <script src='assets/libs/fullcalendar-4.3.1/packages/core/main.js'></script>
+  <script src='assets/libs/fullcalendar-4.3.1/packages/interaction/main.js'></script>
+  <script src='assets/libs/fullcalendar-4.3.1/packages/daygrid/main.js'></script>
+  <script src='assets/libs/fullcalendar-4.3.1/packages/timegrid/main.js'></script>
+  <script src='assets/libs/fullcalendar-4.3.1/packages/list/main.js'></script>
+  <script src="assets/libs/fullcalendar-4.3.1/packages/core/locales/pt-br.js"></script>
+  <!--MomentJS-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js'></script>
+
+  <script src="assets/js/agenda.functions.js"></script>
+</body>
+
 </html>

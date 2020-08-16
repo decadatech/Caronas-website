@@ -1,22 +1,26 @@
 $('#registerModal').modal('hide');
 $('#phone').mask('(00) 90000-0000');
 
+$('#schedule').on('click', () => {
+  $('#registerModal').modal('show');
+});
+
 const calendarEl = document.getElementById('calendar');
 
 const calendar = new FullCalendar.Calendar(calendarEl, {
     plugins: ['interaction', 'dayGrid', 'timeGrid'],
     defaultView: $(window).width() < 765 ? 'dayGridDay':'dayGridWeek',
     header: {
-        left: 'prev,next,today',
-        right: 'title',
+      left: 'prev,next,today',
+      right: 'title',
     },
     locale: 'pt-br',
     timeFormat: 'H(:mm)',
     timeZone: 'BRT',     
     selectable: true,
     editable: true,
-    navLinks: true, // can click day/week names to navigate views
-    eventLimit: true, // allow "more" link when too many events
+    navLinks: true, 
+    eventLimit: true,
     contentHeight: 100,
     // events: {
     //     url: 'REQUEST_FILE',       
