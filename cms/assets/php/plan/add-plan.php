@@ -70,7 +70,6 @@
             imagejpeg($img, '../../../../assets/img/plan/'.$filename);
 
             $queryImage = "INSERT INTO `tb02_planos`(`tb02_titulo`, `tb02_descricao`, `tb02_imagem`, `tb02_ativo_index`) VALUES ('".$titulo."', '".$descricao."', '".$filename."', 0)";
-            print_r($queryImage);
             $resultadoImage = mysqli_query($conexao, $queryImage);
         }
     }

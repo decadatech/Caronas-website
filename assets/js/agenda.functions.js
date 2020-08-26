@@ -1,5 +1,7 @@
 $('#registerModal').modal('hide');
 $('#phone').mask('(00) 90000-0000');
+$('#end').mask('00/00/0000 00:00');
+
 
 $('#schedule').on('click', () => {
   $('#registerModal').modal('show');
@@ -97,4 +99,30 @@ $("#quantity").keyup(function () {
     } else if($("#quantity").val() == 9){
         $("#quantity").val('');
     }
+});
+
+
+$('#scheduleForm').submit(function (event) {
+    var formData = new FormData(this);
+    //formData.append('id', $('.save').data('id'));
+    event.preventDefault();
+    console.log(formData);
+    // $.ajax({
+    //     url: 'assets/php/add-plan.php',
+    //     type: 'POST',
+    //     data: formData,                  
+    //     success: function (result) {
+                
+    //         $('#scheduleForm input').val(''); //LIMPA OS INPUTS 
+    //         $('#scheduleForm textarea').val(''); //LIMPA OS INPUTS 
+    //         $("#scheduleForm select").val(0);
+    //         //$('#ModalConfirm').modal('show'); //ABRE O MODAL             
+    //     },
+    //     Error: function () {
+    //         $('#scheduleForm input').val(''); //LIMPA OS INPUTS 
+    //         $('#scheduleForm textarea').val(''); //LIMPA OS INPUTS 
+    //         $("#scheduleForm select").val(0);
+    //         //$('#formRegister textarea').val('');
+    //     },           
+    // });
 });
