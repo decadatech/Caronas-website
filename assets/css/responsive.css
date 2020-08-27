@@ -32,6 +32,9 @@
 
     .planos .plano{
         margin-top: 10px;
+        width: 260px;
+        min-width: 100px;
+
     }
 
     .blue .content{
