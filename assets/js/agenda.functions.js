@@ -40,8 +40,11 @@ const calendar = new FullCalendar.Calendar(calendarEl, {
         //evento disparado ao redimencionar o evento (update de data)        
     },
     eventClick: function (info) {    
-        //evento disparado ao selecionar um evento (abre o modal de update)        
+        alert('0');      
     },
+    eventRender: function(event, element) {
+        $(element).addTouch();
+    }
 });
 
 calendar.render();
@@ -103,26 +106,25 @@ $("#quantity").keyup(function () {
 
 
 $('#scheduleForm').submit(function (event) {
-    var formData = new FormData(this);
-    //formData.append('id', $('.save').data('id'));
     event.preventDefault();
-    console.log(formData);
-    // $.ajax({
-    //     url: 'assets/php/add-plan.php',
-    //     type: 'POST',
-    //     data: formData,                  
-    //     success: function (result) {
-                
-    //         $('#scheduleForm input').val(''); //LIMPA OS INPUTS 
-    //         $('#scheduleForm textarea').val(''); //LIMPA OS INPUTS 
-    //         $("#scheduleForm select").val(0);
-    //         //$('#ModalConfirm').modal('show'); //ABRE O MODAL             
-    //     },
-    //     Error: function () {
-    //         $('#scheduleForm input').val(''); //LIMPA OS INPUTS 
-    //         $('#scheduleForm textarea').val(''); //LIMPA OS INPUTS 
-    //         $("#scheduleForm select").val(0);
-    //         //$('#formRegister textarea').val('');
-    //     },           
-    // });
+    var formData = new FormData(this);
+    $.ajax({
+        url: 'assets/php/add-plano.php',
+        type: 'POST',
+        data: formData,                 
+        processData: false,  
+        contentType: false, 
+        success: function (result) {                
+            $('#scheduleForm input').val(''); //LIMPA OS INPUTS 
+            $('#scheduleForm textarea').val(''); //LIMPA OS INPUTS 
+            $("#scheduleForm select").val(0);
+            $('#registerModal').modal('hide'); //ABRE O MODAL             
+            $('#confirmModal').modal('show'); //ABRE O MODAL             
+        },
+        Error: function () {
+            $('#scheduleForm input').val(''); //LIMPA OS INPUTS 
+            $('#scheduleForm textarea').val(''); //LIMPA OS INPUTS 
+            $("#scheduleForm select").val(0);
+        },           
+    });
 });
