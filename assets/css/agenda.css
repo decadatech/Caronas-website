@@ -1,5 +1,20 @@
+.banner{
+  background-image: url(../img/banner_agenda.jpg);
+}
+
+body{
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
 section.blue {
   margin-top: -20px;
+}
+
+
+section.blue .texts img{
+  width: 40px;
+  margin-top: 16px;
 }
 
 div.calendar-container {

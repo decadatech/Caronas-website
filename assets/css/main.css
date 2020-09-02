@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap");
 
+:root{
+  --primary-color: rgb(0, 132, 255);
+  --primary-color-dark: rgb(0, 113, 219);
+}
+
 body {
   overflow-x: hidden;
   margin: 0 !important;
@@ -8,8 +13,13 @@ body {
   background-color: #f1f1f5;
 }
 
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
 input,
-button {
+button:active {
   outline: none;
 }
 
@@ -117,14 +127,32 @@ button {
   background-color:rgb(1, 115, 223);
 }
 
-a.ver-planos {
-  float: right;
+.ver-planos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.ver-planos a {
   text-decoration: none;
-  color:  rgb(0, 132, 255);
+  text-align: center;
+  color:  white;
+  background-color: rgb(0, 132, 255);;
   font-weight: 600;
   margin-right: 40px;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 24px;
+  transition: 400ms;
 }
+
+.ver-planos a:hover{
+  background-color: rgb(2, 116, 223);
+  color: white;
+  text-decoration: none;
+}
+
 
 .blue {
   background-color: rgb(0, 132, 255);
@@ -196,7 +224,7 @@ a.ver-planos {
 }
 
 .sua-viagem img {
-  width: 35%;
+  width: 45%;
   margin: 0 50px 50px 50px;
 }
 
@@ -206,8 +234,8 @@ a.ver-planos {
   justify-content: center;  
 }
 
-.sua-viagem div button {
-  background-color: rgb(0, 132, 255);
+.sua-viagem div a {
+  background-color: var(--primary-color);
   max-width: 200px;
   color: white;
   border-radius: 24px;
@@ -216,4 +244,12 @@ a.ver-planos {
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
+  outline: none;
+  transition: 400ms;
+  text-decoration: none;
+  text-align: center;
+}
+
+.sua-viagem div a:hover {
+  background-color: var(--primary-color-dark);
 }
