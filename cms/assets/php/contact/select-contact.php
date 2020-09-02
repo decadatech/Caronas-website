@@ -27,15 +27,16 @@
                 echo "<td>".$linha["tb03_email"]."</td>";
                 echo "<td>".date("d/m/Y H:i:s", strtotime($linha["tb03_hora_cadastro"]))."</td>";
                 echo "<td>";
-                echo    "<button href = 'javascript:func()'onclick='viewPurchase(".$linha["tb03_id"].")' class='btn btn-info' style='margin-right:10px' id='".$linha["tb03_id"]."'
+                echo    "<button href = 'javascript:func()'onclick='viewContact(".$linha["tb03_id"].")' class='btn btn-info' style='margin:0 2px 2px 0' id='".$linha["tb03_id"]."'
+                        data-nome='".$linha["tb03_nome"]."'
                         data-estadoS='".$linha["tb03_estado_saida"]."'
                         data-cidadeS='".$linha["tb03_cidade_saida"]."'
-                        data-estadoC='".$linha["tb03_cidade_chegada"]."'
+                        data-estadoC='".$linha["tb03_estado_chegada"]."'
                         data-cidadeC='".$linha["tb03_cidade_chegada"]."'
-                        data-horaS='".$linha["tb03_hora_saida"]."'
+                        data-horaS='".date("d/m/Y H:i:s", strtotime($linha["tb03_hora_saida"]))."'
                         data-quant='".$linha["tb03_quant_passageiro"]."'
                         data-desc='".$linha["tb03_observacoes"]."'> Informações </button>";
-                echo    "<button href = 'javascript:func()'onclick='confirmarExclusaoUser(".$linha["tb03_id"].")' class='btn btn-danger'> Excluir </a></button>";
+                echo    "<button href = 'javascript:func()'onclick='confirmarExclusaoContact(".$linha["tb03_id"].")' class='btn btn-danger' style='margin:0 2px 2px 0'> Excluir </a></button>";
                 echo "</td>";
             echo "</tr>";  
         }

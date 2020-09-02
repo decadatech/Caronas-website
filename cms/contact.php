@@ -60,6 +60,50 @@
 
   </div>
 
+  <div class="modal fade" id="ModalViewContact" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel"></h5>
+                <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close" >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">                
+                    <div class="form-group col-md-6">
+                        <label for="view-saida"><b>Saída</b></label>
+                        <p id="view-saida"></p>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="view-chegada"><b>Chegada</b></label>
+                        <p id="view-chegada"></p>
+                    </div>   
+                </div>
+                <div class="form-row">              
+                    <div class="form-group col-md-6">
+                        <label for="view-horario"><b>Horário</b></label>
+                        <p id="view-horario"></p>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="view-quant"><b>Quantidade</b></label>
+                        <p id="view-quant"></p>
+                    </div>                                            
+                </div>      
+                <div class="form-row">                 
+                    <div class="form-group col-md-12">
+                        <label for="view-desc"><b>Observações</b></label>
+                        <p id="view-desc"></p>
+                    </div>               
+                </div>                                                             
+            </div>
+            <div class="modal-footer">                         
+                <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
   <!-- JQUERY -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
