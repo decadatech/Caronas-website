@@ -217,6 +217,40 @@ button:active {
   width: 50%;
 }
 
+.coisas{
+  background-color: rgb(235, 235, 235);
+  padding: 5%;
+}
+
+.coisas h1{
+  color: #3c3557;
+}
+
+.coisas .row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coisas .row .coisa{
+  width: 350px;
+  color: #626262;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2%;
+  text-align: center;
+  
+}
+
+.coisas .row .coisa h3{
+  color: #3c3557;
+}
+
+.coisas .row .coisa img{
+  width: 60px;
+}
 .sua-viagem {
   display: flex;
   margin: 100px 0 0 0;
