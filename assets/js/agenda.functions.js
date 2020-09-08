@@ -1,11 +1,20 @@
 $('#registerModal').modal('hide');
 $('#phone').mask('(00) 90000-0000');
 $('#end').mask('00/00/0000 00:00');
-
+$('.divBack').hide();
 
 $('#schedule').on('click', () => {
   $('#registerModal').modal('show');
 });
+
+$("#checkBack").click(function(){
+    if($('.divBack').css('display') == 'none'){
+        $('.divBack').show();         
+    }else{
+        $('.divBack').hide();         
+    }
+});
+
 
 const calendarEl = document.getElementById('calendar');
 
@@ -109,7 +118,7 @@ $('#scheduleForm').submit(function (event) {
     event.preventDefault();
     var formData = new FormData(this);
     $.ajax({
-        url: 'assets/php/add-plano.php',
+        url: 'assets/php/add-contact.php',
         type: 'POST',
         data: formData,                 
         processData: false,  
@@ -118,11 +127,13 @@ $('#scheduleForm').submit(function (event) {
             $('#scheduleForm input').val(''); //LIMPA OS INPUTS 
             $('#scheduleForm textarea').val(''); //LIMPA OS INPUTS 
             $("#scheduleForm select").val(0);
+            $('checkBack').prop("checked", false);
             $('#registerModal').modal('hide'); //ABRE O MODAL             
             $('#confirmModal').modal('show'); //ABRE O MODAL             
         },
         Error: function () {
             $('#scheduleForm input').val(''); //LIMPA OS INPUTS 
+            $('checkBack').prop("checked", false);
             $('#scheduleForm textarea').val(''); //LIMPA OS INPUTS 
             $("#scheduleForm select").val(0);
         },           
