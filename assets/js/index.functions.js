@@ -5,6 +5,15 @@ $.ajax({
     },
 });
 
+$.getJSON('https://servicodados.ibge.gov.br/api/v1/localidades/estados/31|35/municipios', {id: $(this).find("option:selected").attr('data-id')}, function (json) {  
+    var options = null;
+    for (var i = 0; i < json.length; i++) {
+        options += '<option value="' + json[i].nome + '" >' + json[i].nome + '</option>';
+    }
+    $("select[name='saindo']").html('<option value="default"> Saindo para...</option>' + options);
+    $("select[name='indo']").html('<option value="default"> Indo para...</option>' + options);
+});
+
 // $('#cadastroForm').submit(function (event) {
 //     event.preventDefault();
 //     $.ajax({
