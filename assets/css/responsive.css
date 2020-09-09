@@ -13,7 +13,7 @@
         flex-direction: column;
     }
 
-    .banner form input.first-input{
+    .banner form select.first-select{
         border-radius: 12px 12px 0 0;
     }
 

@@ -18,6 +18,7 @@ a:hover{
   color: white;
 }
 
+select,
 input,
 button:active {
   outline: none;
@@ -47,21 +48,22 @@ button:active {
 .banner form {
   display: flex;
   overflow: hidden;  
+  color: #626262;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
 }
 
 .banner form input {
   height: 100%;
   border: 0;
-  font-size: 18px;
 }
 
-.banner form input.first-input {
+.banner form select.first-select {
   border-radius: 12px 0 0 12px;
 }
 
-.banner form input.date {
-  /* height: 50px; */
-  color: #626262;
+.banner form select{
+  border: 0;
 }
 
 .banner form button {
