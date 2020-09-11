@@ -13,6 +13,13 @@
         flex-direction: column;
     }
 
+    .banner form select{
+        height: 100%;
+    }
+
+    .banner form input{
+      /*  height: 100px; */
+    }
     .banner form select.first-select{
         border-radius: 12px 12px 0 0;
     }
@@ -41,6 +48,14 @@
         flex-direction: column;
     }
 
+    .coisas{
+        padding: 10% 0;
+    }
+
+    .coisas h1{
+        margin: 5% 10%;
+    }
+
     .sua-viagem{
         flex-direction: column;
     }
@@ -51,6 +66,14 @@
 
     .sua-viagem div{
         margin: 0 40px 40px 40px;
+    }
+
+    footer{
+        padding: 60px 6px;
+    }
+
+    footer p{
+        font-size: 16px;
     }
     
 }

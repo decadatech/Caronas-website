@@ -86,6 +86,8 @@ button:active {
 
 .planos {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .planos .plano {
