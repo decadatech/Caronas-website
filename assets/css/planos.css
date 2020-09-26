@@ -2,7 +2,10 @@
 body{
     margin: 0;
     font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
 }
+
+
 
 .banner {
     display: flex;
@@ -34,6 +37,7 @@ body{
     display: flex;
     justify-content: flex-start;
     margin: 0 auto;
+    max-width: 90vw;
   }
   
   .planos .plano{
@@ -49,7 +53,6 @@ body{
     padding: 20px;
    width: 400px;
    max-width: 400px;
-   min-width: 400px;
   }
   
   .planos .plano img{
