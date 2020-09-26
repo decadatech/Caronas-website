@@ -1,10 +1,7 @@
 <?php
   include_once "../assets/php/conexao.php";
   include_once "assets/php/login/verificado-login.php";
-
-  if(!empty($_GET['f'])){
-    $filtro = (int)($_GET['f']); 
-  }
+  date_default_timezone_set('America/Sao_Paulo');
 ?>
 
 <html>
@@ -33,13 +30,13 @@
         <h3>Páginas</h3>
       </div>
       <div class="list-group list-group-flush">
-        <a style="background-color: #242424; color: white" href="index.php" class="list-group-item list-group-item-action">
+        <a href="index.php" class="list-group-item list-group-item-action">
           HOME
         </a>
         <a href="plans.php" class="list-group-item list-group-item-action">
           PLANOS
         </a>
-        <a href="about.php" class="list-group-item list-group-item-action">
+        <a style="background-color: #242424; color: white" href="about.php" class="list-group-item list-group-item-action">
           SOBRE NÓS
         </a>
         <a href="contact.php" class="list-group-item list-group-item-action">
@@ -58,18 +55,52 @@
         <a style="margin: 2px" href="assets/php/login/logout.php" class="btn btn-danger"> Sair </a>
       </nav>    
 
-      <div class="container-fluid" style="padding: 20px; width: 100%; background-color: #f5f5f5; display: flex; justify-content: center; align-items: center;">
+      <div class="container-fluid" style="padding: 20px; width: 100%; display: flex; justify-content: center; align-items: center;">
         <div class="container">
-          <form method="POST" id="formIndexPlans" action="assets/php/index/edit-index-plans.php">
-            <h3> Destacar os planos na página inicial</h3>
-            <div class="ajax-reponse-select-index-plan"></div>
-            <br />
-            <button type="submit" class="btn btn-primary">Atualizar</button>
-          </form>
+        <h2>Aviso na Home</h2>  
+
+          <div class="form-group">
+              <form method="POST" id="FormMessage">
+                <label for="message">Mensagem</label>
+                <?php
+                  $query = "SELECT * FROM `tb04_sobre` WHERE 1 LIMIT 1";
+                  $result = $conexao->query($query);
+              
+                  if($result->num_rows>0) { 
+                    while ($linha = $result->fetch_assoc()){    
+                      $mensagem = $linha['tb04_mensagem'];
+                    }
+                  }
+                ?>
+                <textarea class="form-control" id="message" rows="3" name="message" required><?php echo $mensagem; ?></textarea>
+                <hr>
+                <button type="submit" class="btn btn-success save">Editar</button>                                              
+              </form>
+          </div>          
         </div>
-      </div>
+      </div>       
 
   </div>   
+
+	<!-- MODAL ALERT -->
+	<div id="alertModal" class="modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Alteração feita!</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+						<p>Seu alerta foi alterado com sucesso.</p>
+				</div>
+				<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
   <!-- JQUERY -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -81,7 +112,7 @@
   <!-- FEATHER ICONS -->
   <script src="https://unpkg.com/feather-icons"></script>
   <!-- INDEX JS -->
-  <script src="assets/js/indexCMS.js"></script>
+  <script src="assets/js/aboutCMS.js"></script>
 
   <script>
     $(document).ready(function() {

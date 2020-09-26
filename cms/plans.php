@@ -37,6 +37,12 @@
         <a style="background-color: #242424; color: white" href="plans.php" class="list-group-item list-group-item-action">
           PLANOS
         </a>
+        <a href="about.php" class="list-group-item list-group-item-action">
+          SOBRE NÓS
+        </a>
+        <a href="contact.php" class="list-group-item list-group-item-action">
+          CONTATO
+        </a>
         <a href="user.php" class="list-group-item list-group-item-action">
           USUÁRIO
         </a>
