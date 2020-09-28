@@ -4,6 +4,7 @@
 
     $titulo = mysqli_real_escape_string($conexao, trim($_POST['edit-titulo']));
     $descricao = mysqli_real_escape_string($conexao, trim($_POST['edit-descricao']));
+    $preco = mysqli_real_escape_string($conexao, trim($_POST['edit-price']));
     $id = $_POST['id'];
 
     if($_FILES['edit-image']['size'] > 0){
@@ -27,7 +28,7 @@
         addProductImage($tmp_name, $type, $titulo, $descricao, $id);
         
     }else{
-        $queryImage = "UPDATE `tb02_planos` SET `tb02_titulo`='".$titulo."',`tb02_descricao`='".$descricao."' WHERE `tb02_id` = $id";
+        $queryImage = "UPDATE `tb02_planos` SET `tb02_titulo`='".$titulo."',`tb02_descricao`='".$descricao."', `tb02_preco`='".$preco."' WHERE `tb02_id` = $id";
         $resultadoImage = mysqli_query($conexao, $queryImage);
     }
 
@@ -87,7 +88,7 @@
             $filename = md5(time().rand(0,999).rand(0,999)).'.jpg';
             imagejpeg($img, '../../../../assets/img/plan/'.$filename);
 
-            $queryImage = "UPDATE `tb02_planos` SET `tb02_titulo`='".$titulo."',`tb02_descricao`='".$descricao."',`tb02_imagem`='".$filename."' WHERE `tb02_id` = $id";
+            $queryImage = "UPDATE `tb02_planos` SET `tb02_titulo`='".$titulo."',`tb02_descricao`='".$descricao."',`tb02_imagem`='".$filename."', `tb02_preco`='".$preco."' WHERE `tb02_id` = $id";
             $resultadoImage = mysqli_query($conexao, $queryImage);
         }
     }

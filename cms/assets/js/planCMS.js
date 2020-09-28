@@ -1,3 +1,8 @@
+$(document).ready(function() {     
+    $('#price').mask('###0,00', {reverse: true});
+    $('#edit-price').mask('###0,00', {reverse: true});
+});
+
 $.ajax({
     url: 'assets/php/plan/select-plan.php',
     success: function(response) {
@@ -115,6 +120,7 @@ function editarPlan(id) {
     let buttonId = "#"+id; //ID DO BOTAO PRESSIONADO
     $('#edit-titulo').val($(buttonId).data('titulo'));
     $('#edit-descricao').val($(buttonId).data('descricao'));
+    $('#edit-price').val($(buttonId).data('price'));
     $('.save').data('id', id); 
 
 }  

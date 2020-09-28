@@ -24,6 +24,7 @@
                 echo    "<button href = 'javascript:func()'onclick='editarPlan(".$linha["tb02_id"].")' class='btn btn-success' style='margin:2px;' id='".$linha["tb02_id"]."'
                          data-id='".$linha["tb02_id"]."'
                          data-titulo='".$linha["tb02_titulo"]."'
+                         data-price='".$linha["tb02_preco"]."'
                          data-descricao='".$linha["tb02_descricao"]."'> Editar </a></button>";
                 echo    "<button href = 'javascript:func()'onclick='confirmarExclusaoPlan(".$linha["tb02_id"].")' class='btn btn-danger' style='margin:2px;'> Excluir </a></button>";
                 echo "</td>";

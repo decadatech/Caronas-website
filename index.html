@@ -19,60 +19,51 @@
 
   <nav>
     <ul>
-      <a href="planos.html">
-        <li>Planos</li>
-      </a>
-      <a href="agenda.html">
-        <li>Agendar</li>
-      </a>
-      <a href="sobre.html">
-        <li>Sobre Nós</li>
-      </a>
-      <a href="#">
-        <li>Home</li>
-      </a>
+      <a href="planos.html"><li>Planos</li></a>
+      <a href="agenda.html"><li>Agendar</li></a>
+      <a href="sobre.html"><li>Sobre Nós</li></a>
+      <a href="index.html"><li>Home</li></a>
     </ul>
   </nav>
 
   <div class="banner">
     <h1>Caronas de Confiança para o seu Destino</h1>
 
-    <form id="cadastroForm">
-      <select name="saindo" id="saindo" required class="first-select"></select>
-      <select name="indo" id="indo" required></select>
-      <input name="data" type="date" class="date">
-      <input name="passageiros" type="number" placeholder=" Passageiros">
-
+    <form id="cadastroForm" action="agenda.html">
+      <select name="s" id="saindo" class="first-select" required></select>
+      <select name="i" id="indo" required></select>
+      <input name="d" id="data" type="text" placeholder="Data e horário de Saída" class="date" required>
+      <input name="p" id="passageiros" type="text" placeholder=" Passageiros (max: 6)" maxlength="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
       <button type="submit">
         <img src="assets/img/send.svg" alt="">
       </button>
     </form>
   </div>
 
-  <!-- <section class="planos ajax-reponse-select-plan"> -->
+  <!-- <section class="planos ajax-reponse-select-plan"></section> -->
   <section class="planos">
     <div class="plano">
       <h4>Primeiro Plano</h4>
-      <img src="assets/img/plano.png" alt="">
+      <img src="assets/img/plan/plano.png" alt="">
       <p>Esse plano inclui 6 viagens por mês</p>
-      <button>Saiba Mais</button>
+      <!-- <button>Saiba Mais</button> -->
     </div>
 
     <div class="plano">
       <h4>Primeiro Plano</h4>
-      <img src="assets/img/plano.png" alt="">
+      <img src="assets/img/plan/plano.png" alt="">
       <p>Esse plano inclui 6 viagens por mês</p>
-      <button>Saiba Mais</button>
+      <!-- <button>Saiba Mais</button> -->
     </div>
 
     <div class="plano">
       <h4>Primeiro Plano</h4>
-      <img src="assets/img/plano.png" alt="">
+      <img src="assets/img/plan/plano.png" alt="">
       <p>Esse plano inclui 6 viagens por mês</p>
-      <button>Saiba Mais</button>
+      <!-- <button>Saiba Mais</button> -->
     </div>
-
   </section>
+  
   <div class="ver-planos">
     <a href="planos.html">Ver todos os planos >></a>
   </div>
@@ -83,6 +74,7 @@
       <h1>Uma carona para onde?</h1>
       <h3>Confira os trajetos mais procurados</h3>
     </div>
+    <!-- <div class="content ajax-reponse-select-namePlan"> -->
     <div class="content">
       <div class="item">
         <h4>São Paulo >> Campinas</h4>
@@ -125,7 +117,7 @@
   </section>
 
   <section class="sua-viagem">
-    <img src="assets/img/plano.png" alt="">
+    <img src="assets/img/plan/plano.png" alt="">
 
     <div>
       <h2>Sua viagem, sua escolha</h2>
@@ -144,10 +136,10 @@
 
     <div class="links">
       <h2>Links</h2>
-      <p><a href="#">Home</a></p>
-      <p><a href="#">Sobre Nós</a></p>
-      <p><a href="#">Planos</a></p>
-      <p><a href="#">Agendar</a></p>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="sobre.html">Sobre Nós</a></p>
+      <p><a href="planos.html">Planos</a></p>
+      <p><a href="agenda.html">Agendar</a></p>
     </div>
 
     <div>
@@ -167,6 +159,7 @@
   <!-- JQUERY -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="assets/libs/jquery.mask.js"></script>
 
   <!-- INDEX FUNCTIONS -->
   <script src="assets/js/index.functions.js"></script>

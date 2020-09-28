@@ -69,11 +69,20 @@
               <input type="text" class="form-control" id="name" name="name" required/>
             </div>
             <div class="form-group">
-                  <label for="descricao">Descrição</label>
-                  <textarea class="form-control" id="text" rows="3" id="descricao" name="descricao" required></textarea>
-              </div>   
+              <label for="descricao">Descrição</label>
+              <textarea class="form-control" id="text" rows="3" id="descricao" name="descricao" required></textarea>
+            </div>   
+            <label for="price">Preço (Min) (Opcional)</label>
+            <div class="input-group row">
+              <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit" disabled>R$</button>
+              </div>
+              <div class="col-xs-2">
+                <input type="text" class="form-control" id="price" name="price" />            
+              </div>        
+            </div>
             <div class="form-group">
-              <label for="photo">Foto</label>
+              <label for="photo">Foto (Opcional)</label>
               <input type="file" class="form-control" id="photo" name="photo" accept="image/png, image/jpeg" onchange="verificaExtensao(this)" />
             </div>
             <hr>
@@ -111,8 +120,15 @@
                   <label for="edit-descricao">Descrição</label>
                   <textarea class="form-control" name="edit-descricao" id="edit-descricao"></textarea>
                 </div>  
+                <label for="edit-price">Preço (Min) (Opcional)</label>
+                <div class="input-group col-md-6">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit" disabled>R$</button>
+                  </div>
+                  <input type="text" class="form-control" name="edit-price" id="edit-price">
+                </div>  
                 <div class="form-group col-md-12">
-                  <label for="edit-image">Imagem (opcional)</label>
+                  <label for="edit-image">Imagem (Opcional)</label>
                   <input type="file" class="form-control" name="edit-image" id="edit-image">
                 </div>              
               </div>             
@@ -173,6 +189,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!-- Bootstrap JS CDN -->
     <script src="../assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/libs/jquery.mask.js"></script>
     <!-- INDEX JS -->
     <script src="assets/js/planCMS.js"></script>
 

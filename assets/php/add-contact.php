@@ -1,11 +1,14 @@
 <?php
     include_once "conexao.php";
+    
 
     $nome = mysqli_real_escape_string($conexao, trim($_POST['name']));
-    $estadoS = mysqli_real_escape_string($conexao, trim($_POST['estado0']));
     $cidadeS = mysqli_real_escape_string($conexao, trim($_POST['cidade0']));
-    $estadoC = mysqli_real_escape_string($conexao, trim($_POST['estado1']));
+    $estadoS = substr($cidadeS,-2);
+    $cidadeS = substr($cidadeS, 0, -5);
     $cidadeC = mysqli_real_escape_string($conexao, trim($_POST['cidade1']));
+    $estadoC = substr($cidadeC,-2);
+    $cidadeC = substr($cidadeC, 0, -5);
     $telefone = mysqli_real_escape_string($conexao, trim($_POST['phone']));
     $horaS = mysqli_real_escape_string($conexao, trim($_POST['end']));
     $horaS = str_replace('/', '-', $horaS);

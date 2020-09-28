@@ -4,16 +4,16 @@
 
     $titulo = mysqli_real_escape_string($conexao, trim($_POST['name']));
     $descricao = mysqli_real_escape_string($conexao, trim($_POST['descricao']));
+    $preco = mysqli_real_escape_string($conexao, trim($_POST['price']));
 
     $images = $_FILES['photo'];
 
     $tmp_name = $images['tmp_name'];
     $type = $images['type'];
 
-    addProductImage($tmp_name, $type, $titulo, $descricao);
+    addProductImage($tmp_name, $type, $titulo, $descricao, $preco);
 
-
-    function addProductImage($tmp_name, $type, $titulo, $descricao){
+    function addProductImage($tmp_name, $type, $titulo, $descricao, $preco){
         global $conexao;
         switch($type) {
             case 'image/jpg':
@@ -69,8 +69,11 @@
             $filename = md5(time().rand(0,999).rand(0,999)).'.jpg';
             imagejpeg($img, '../../../../assets/img/plan/'.$filename);
 
-            $queryImage = "INSERT INTO `tb02_planos`(`tb02_titulo`, `tb02_descricao`, `tb02_imagem`, `tb02_ativo_index`) VALUES ('".$titulo."', '".$descricao."', '".$filename."', 0)";
-            $resultadoImage = mysqli_query($conexao, $queryImage);
+            $query = "INSERT INTO `tb02_planos`(`tb02_titulo`, `tb02_descricao`, `tb02_imagem`, `tb02_preco`, `tb02_ativo_index`) VALUES ('".$titulo."', '".$descricao."', '".$filename."', '".$preco."', 0)";
+        }else{
+            $query = "INSERT INTO `tb02_planos`(`tb02_titulo`, `tb02_descricao`, `tb02_imagem`, `tb02_preco`, `tb02_ativo_index`) VALUES ('".$titulo."', '".$descricao."', 'plano.png', '".$preco."', 0)";
         }
+        echo $query;
+        $resultadoImage = mysqli_query($conexao, $query);
     }
 ?>
