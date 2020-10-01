@@ -37,7 +37,7 @@
     </div>";
         
     }else {
-        echo "<br/><h5>Nenhuma marca inserida</h5>";
+        echo "<br/><h5>Nenhuma plano inserido</h5>";
     }        
 
 
