@@ -12,7 +12,7 @@
                     echo '<h5>R$ '.$linha["tb02_preco"].'</h5>';
                 }
             echo'
-                    <a href="planos.html"><img src="assets/img/next.svg" alt=""></a>
+                    <a href="planos.html"><img src="assets/img/next.svg" alt="Seta para direita"></a>
                 </div>';
         }
     }

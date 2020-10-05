@@ -7,8 +7,8 @@
 		exit();
 	}
 
-	$usuario = mysqli_real_escape_string($conexao, $_POST['user']);
-	$senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+	$usuario = mysqli_real_escape_string($conexao, strtolower($_POST['user']));
+	$senha = mysqli_real_escape_string($conexao, strtolower($_POST['senha']));
 	$senhaHash = md5($senha);
 
 	$query = "SELECT * FROM tb01_login WHERE tb01_usuario = '".$usuario."' AND tb01_senha = '".$senhaHash."'";
@@ -41,14 +41,4 @@
 		$_SESSION['nao_autenticado'] = true;
 		exit();
 	}    
-
-	// if($row == 1) {
-	// 	$_SESSION['email'] = $usuario;
-	// 	header('Location: perfil.php');
-	// exit();
-	// } else {
-	// 	$_SESSION['nao_autenticado'] = true;
-	// 	header('Location: logar.php');
-	// 	exit();
-	// }
 ?>

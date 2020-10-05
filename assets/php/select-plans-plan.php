@@ -13,7 +13,7 @@
             }     
             echo '<div class="plano">
                     <h4>'.$linha['tb02_titulo'].'</h4>
-                    <img src="assets/img/plan/'.$linha['tb02_imagem'].'" alt="Foto de '.$linha['tb02_titulo'].'">
+                    <img src="assets/img/plan/'.$linha['tb02_imagem'].'" alt="Imagem de '.$linha['tb02_titulo'].'">
                     <p>'.$linha['tb02_descricao'].'</p>
                     <button>Agendar</button>
                 </div>';
