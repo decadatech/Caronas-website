@@ -37,6 +37,9 @@
         <a href="plans.php" class="list-group-item list-group-item-action">
           PLANOS
         </a> 
+        <a href="work.php" class="list-group-item list-group-item-action">
+          TRABALHE CONOSCO
+        </a> 
         <a href="contact.php" class="list-group-item list-group-item-action">
           CONTATO
         </a>

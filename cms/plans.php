@@ -40,6 +40,9 @@
         <a href="about.php" class="list-group-item list-group-item-action">
           SOBRE NÓS
         </a>
+        <a href="work.php" class="list-group-item list-group-item-action">
+          TRABALHE CONOSCO
+        </a> 
         <a href="contact.php" class="list-group-item list-group-item-action">
           CONTATO
         </a>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="assets/css/nav.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/footer.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="stylesheet" href="assets/css/work.css">  
+	
+	<link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+
+	<!-- FULLCALENDAR CSS -->
+	<link href="assets/libs/fullcalendar-4.3.1/packages/core/main.css" rel="stylesheet" />
+	<link href="assets/libs/fullcalendar-4.3.1/packages/timegrid/main.css" rel="stylesheet" />
+	<link href="assets/libs/fullcalendar-4.3.1/packages/list/main.css" rel="stylesheet" />
+
+	<title>Agendamento - Bhoraaa</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<a href="work.html"><li>Trabalhe Conosco</li></a>
+			<a href="agenda.html"><li>Agendar</li></a>
+			<a href="planos.html"><li>Planos</li></a>
+			<a href="sobre.html"><li>Sobre Nós</li></a>
+			<a href="index.html"><li>Home</li></a>
+		</ul>
+	</nav>
+
+	<div class="banner">
+		<h1>Trabalhe Conosco</h1>
+	</div>
+
+	<section class="form">
+		<div class="container">
+			<form id="formWork" method="POST" enctype="multipart/form-data">
+				<div class="form-group">
+					<div class="form-row">
+						<div class="col-8">
+								<label for="name">Nome completo</label>
+								<input type="text" class="form-control" id="name" name="name" required>
+						</div>
+						<div class="col-4">
+								<label for="phone">Telefone</label>
+								<input type="text" class="form-control" id="phone" name="phone" required>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="email">E-mail</label>
+					<input type="email" class="form-control" id="email" name="email" required>
+				</div>
+				<div class="form-group">
+					<label for="message">Mensagem de apresentação</label>
+					<textarea class="form-control" id="message" rows="5" name="message" required></textarea>
+				</div>
+				<div class="screen-cnh-alert" style="position: relative; width: 100%;"></div>
+				<div class="form-cnh-group">
+					<label class="thumbnail" id="thumbnail">
+						<input type="file" name="cnh" id="cnh" accept="application/pdf, image/jpeg, image/png"
+							onchange="verificaExtensao(this)" required/>
+						<div class="asset">
+							<i data-feather="archive"></i>
+							<p id="nomeCNH">Envie-nos sua CNH</p>
+						</div>
+					</label>
+				</div>
+				<div class="screen-carro-alert" style="position: relative; width: 100%;"></div>
+				<div class="form-group">
+					<label class="thumbnail" id="thumbnail">
+						<input type="file" name="carro" id="carro" accept="application/pdf, image/jpeg, image/png"
+								onchange="verificaExtensao(this)" required/>
+						<div class="asset">
+							<i data-feather="archive"></i>
+							<p id="nomeCarro">Envie-nos o Documento do seu Carro</p>
+						</div>
+					</label>
+				</div>
+				<div class="screen-endereco-alert" style="position: relative; width: 100%;"></div>
+				<div class="form-group">
+					<label class="thumbnail" id="thumbnail">
+						<input type="file" name="endereco" id="endereco" accept="application/pdf, image/jpeg, image/png"
+								onchange="verificaExtensao(this)" required/>
+						<div class="asset">
+							<i data-feather="archive"></i>
+							<p id="nomeEndereco">Envie-nos seu Comprovante de Endereço</p>
+						</div>
+					</label>
+				</div>
+				<div class="form-group">
+					<button type="submit">Enviar</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<footer>
+		<div class="quem">
+			<h2>Sobre Nós</h2>
+			<p>Nós somos uma empresa que oferece caronas compartilhadas nos estados de São Paulo e Minas Gerais, com
+					segurança e conforto.</p>
+		</div>
+
+		<div class="links">
+			<h2>Links</h2>
+			<p><a href="index.html">Home</a></p>
+			<p><a href="sobre.html">Sobre Nós</a></p>
+			<p><a href="planos.html">Planos</a></p>
+			<p><a href="agenda.html">Agendar</a></p>
+			<p><a href="work.html">Trabalhe Conosco</a></p>
+		</div>
+
+		<div>
+			<h2>Contato</h2>
+			<br>
+			<p><strong>Telefone:</strong> (99)99999-9999</p>
+			<p><strong>E-mail:</strong> contato@bhoraaa.com.br</p>
+		</div>
+	</footer>
+
+	<div class="copyright">
+		<p>Copyright &copy; <span class="date-dynamic"></span><a href="https://www.decadatech.com/"> Decada Technology</a></p>
+	</div>
+
+	<!-- MODAL DE CONFIRMAÇÃO DE ENVIO -->
+	<div class="modal fade" id="add" tabindex="1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalCenterTitle">Aviso</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<h4>Sua mensagem foi enviada com sucesso</h4>
+					<p>Entraremos em contato o mais breve possível</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- FEATHER ICONS -->
+	<script src="https://unpkg.com/feather-icons"></script>	
+	<!-- JQUERY -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!-- Bootstrap JS CDN -->
+	<script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+	<!-- JQUERY MASK -->
+  	<script src="assets/libs/jquery.mask.js"></script>
+	<!-- WORK FUNCTIONS -->
+	<script src="assets/js/work.functions.js"></script>
+	<!-- HORA FUNCTIONS -->
+	<script type="text/javascript" src="assets/js/hour.functions.js"></script>
+	<script>
+		feather.replace()
+	</script>
+</body>
+</html>

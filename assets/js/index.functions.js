@@ -24,11 +24,11 @@ $.ajax({
     },
 });
 
-$.getJSON('https://servicodados.ibge.gov.br/api/v1/localidades/estados/31|35/municipios', {id: $(this).find("option:selected").attr('data-id')}, function (json) {  
-    var options = null;
-    for (var i = 0; i < json.length; i++) {
-        options += '<option value="' + json[i].id + '" >' + json[i].nome + " - " + json[i].microrregiao.mesorregiao.UF.sigla + '</option>';
-    }
-    $("select[name='s']").html('<option disabled value="" selected hidden> Saindo de ...</option>' + options);
-    $("select[name='i']").html('<option disabled value="" selected hidden> Indo para...</option>' + options);
-});
+// $.getJSON('https://servicodados.ibge.gov.br/api/v1/localidades/estados/31|35/municipios', {id: $(this).find("option:selected").attr('data-id')}, function (json) {  
+//     var options = null;
+//     for (var i = 0; i < json.length; i++) {
+//         options += '<option value="' + json[i].id + '" >' + json[i].nome + " - " + json[i].microrregiao.mesorregiao.UF.sigla + '</option>';
+//     }
+//     $("select[name='s']").html('<option disabled value="" selected hidden> Saindo de ...</option>' + options);
+//     $("select[name='i']").html('<option disabled value="" selected hidden> Indo para...</option>' + options);
+// });

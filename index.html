@@ -19,10 +19,11 @@
 
   <nav>
     <ul>
-      <a href="planos.html"><li>Planos</li></a>
-      <a href="agenda.html"><li>Agendar</li></a>
-      <a href="sobre.html"><li>Sobre Nós</li></a>
-      <a href="index.html"><li>Home</li></a>
+      <a href="work.html"><li>Trabalhe Conosco</li></a>
+			<a href="agenda.html"><li>Agendar</li></a>
+			<a href="planos.html"><li>Planos</li></a>
+			<a href="sobre.html"><li>Sobre Nós</li></a>
+			<a href="index.html"><li>Home</li></a>
     </ul>
   </nav>
 
@@ -30,8 +31,50 @@
     <h1>Caronas de confiança para o seu destino</h1>
 
     <form id="cadastroForm" action="agenda.html">
-      <select name="s" id="saindo" class="first-select" required></select>
-      <select name="i" id="indo" required></select>
+      <select name="s" id="saindo" class="first-select" required>
+        <option disabled value="" selected hidden>Saindo de ...</option>
+        <option value="1">Rodoviária de Arujá - SP</option>
+        <option value="2">Rodoviária de Mogi das Cruzes - SP</option>
+        <option value="3">Rodoviária de Suzano - SP</option>
+        <option value="4">Rodoviária de POA - SP</option>
+        <option value="5">Rodoviária de Guarulhos - SP</option>
+        <option value="6">Rodoviária de Santa Isabel - SP</option>
+        <option value="7">Rodoviária de Jacareí - SP</option>
+        <option value="8">Rodoviária de São José dos Campos - SP</option>
+        <option value="9">Rodoviária de Taubaté - SP</option>
+        <option value="10">Rodoviária de Aparecida do Norte - SP</option>
+        <option value="11">Rodoviária de Ilha bela - SP</option>
+        <option value="12">Rodoviária de Ubatuba - SP</option>
+        <option value="13">Rodoviária de Caraguatatuba - SP</option>
+        <option value="14">Rodoviária de Bertioga - SP</option>
+        <option value="15">Rodoviária de Salto - SP</option>
+        <option value="16">Rodoviária de Itu - SP</option>
+        <option value="17">Rodoviária de Sorocaba - SP</option>
+        <option value="18">Rodoviária de Boituva - SP</option>
+        <option value="19">Rodoviária de Botucatu - SP</option>
+      </select>
+      <select name="i" id="indo" required>
+        <option disabled value="" selected hidden>Indo para ...</option>
+        <option value="1">Rodoviária de Arujá - SP</option>
+        <option value="2">Rodoviária de Mogi das Cruzes - SP</option>
+        <option value="3">Rodoviária de Suzano - SP</option>
+        <option value="4">Rodoviária de POA - SP</option>
+        <option value="5">Rodoviária de Guarulhos - SP</option>
+        <option value="6">Rodoviária de Santa Isabel - SP</option>
+        <option value="7">Rodoviária de Jacareí - SP</option>
+        <option value="8">Rodoviária de São José dos Campos - SP</option>
+        <option value="9">Rodoviária de Taubaté - SP</option>
+        <option value="10">Rodoviária de Aparecida do Norte - SP</option>
+        <option value="11">Rodoviária de Ilha bela - SP</option>
+        <option value="12">Rodoviária de Ubatuba - SP</option>
+        <option value="13">Rodoviária de Caraguatatuba - SP</option>
+        <option value="14">Rodoviária de Bertioga - SP</option>
+        <option value="15">Rodoviária de Salto - SP</option>
+        <option value="16">Rodoviária de Itu - SP</option>
+        <option value="17">Rodoviária de Sorocaba - SP</option>
+        <option value="18">Rodoviária de Boituva - SP</option>
+        <option value="19">Rodoviária de Botucatu - SP</option>
+      </select>
       <input name="d" id="data" type="text" placeholder="Data e horário de Saída" class="date" required>
       <input name="p" id="passageiros" type="text" placeholder=" Passageiros (max: 6)" maxlength="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
       <button type="submit">
@@ -98,9 +141,10 @@
     <div class="links">
       <h2>Links</h2>
       <p><a href="index.html">Home</a></p>
-      <p><a href="sobre.html">Sobre Nós</a></p>
-      <p><a href="planos.html">Planos</a></p>
-      <p><a href="agenda.html">Agendar</a></p>
+			<p><a href="sobre.html">Sobre Nós</a></p>
+			<p><a href="planos.html">Planos</a></p>
+			<p><a href="agenda.html">Agendar</a></p>
+			<p><a href="work.html">Trabalhe Conosco</a></p>
     </div>
 
     <div>

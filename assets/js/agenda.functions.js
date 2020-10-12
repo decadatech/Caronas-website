@@ -6,34 +6,54 @@ for(var i=0; i<params.length; i++) {
     paramArray[param[0]] = param[1];
 }
 
-$.getJSON('https://servicodados.ibge.gov.br/api/v1/localidades/estados/31|35/municipios', {id: $(this).find("option:selected").attr('data-id')}, function (json) {  
-    var options = null;
-    for (var i = 0; i < json.length; i++) {
-        options += '<option value="' + json[i].id + '" name="' + json[i].nome + " - " + json[i].microrregiao.mesorregiao.UF.sigla + '">' + json[i].nome + " - " + json[i].microrregiao.mesorregiao.UF.sigla + '</option>';
-    }
-    $("select[name='cidade0']").html('<option disabled value="" selected hidden> Saindo de ...</option>' + options);
-    $("select[name='cidade1']").html('<option disabled value="" selected hidden> Indo para...</option>' + options);
+// $.getJSON('https://servicodados.ibge.gov.br/api/v1/localidades/estados/31|35/municipios', {id: $(this).find("option:selected").attr('data-id')}, function (json) {  
+//     var options = null;
+//     for (var i = 0; i < json.length; i++) {
+//         options += '<option value="' + json[i].id + '" name="' + json[i].nome + " - " + json[i].microrregiao.mesorregiao.UF.sigla + '">' + json[i].nome + " - " + json[i].microrregiao.mesorregiao.UF.sigla + '</option>';
+//     }
+//     $("select[name='cidade0']").html('<option disabled value="" selected hidden> Saindo de ...</option>' + options);
+//     $("select[name='cidade1']").html('<option disabled value="" selected hidden> Indo para...</option>' + options);
 
-    if(paramArray["s"] != undefined){
-        $("select[name='cidade0']").val(paramArray["s"]);
-    }
-    if(paramArray["i"] != undefined){
-        $("select[name='cidade1']").val(paramArray["i"]);
-    }
-    if(paramArray["d"] != undefined){
-        var data = paramArray["d"].split('%2F').join('/');
-        data = data.split('+').join(' ');
-        data = data.split('%3A').join(':');
-        $("#end").val(data);
-    }
-    if(paramArray["p"] != undefined){
-        $("#quantity").val(paramArray["p"]);
-    }
+//     if(paramArray["s"] != undefined){
+//         $("select[name='cidade0']").val(paramArray["s"]);
+//     }
+//     if(paramArray["i"] != undefined){
+//         $("select[name='cidade1']").val(paramArray["i"]);
+//     }
+//     if(paramArray["d"] != undefined){
+//         var data = paramArray["d"].split('%2F').join('/');
+//         data = data.split('+').join(' ');
+//         data = data.split('%3A').join(':');
+//         $("#end").val(data);
+//     }
+//     if(paramArray["p"] != undefined){
+//         $("#quantity").val(paramArray["p"]);
+//     }
 
-    if(paramArray["s"] != undefined || paramArray["i"] != undefined || paramArray["d"] != undefined || paramArray["p"] != undefined){
-        $('#registerModal').modal('show');
-    }
-});
+//     if(paramArray["s"] != undefined || paramArray["i"] != undefined || paramArray["d"] != undefined || paramArray["p"] != undefined){
+//         $('#registerModal').modal('show');
+//     }
+// });
+
+if(paramArray["s"] != undefined){
+    $("select[name='cidade0']").val(paramArray["s"]);
+}
+if(paramArray["i"] != undefined){
+    $("select[name='cidade1']").val(paramArray["i"]);
+}
+if(paramArray["d"] != undefined){
+    var data = paramArray["d"].split('%2F').join('/');
+    data = data.split('+').join(' ');
+    data = data.split('%3A').join(':');
+    $("#end").val(data);
+}
+if(paramArray["p"] != undefined){
+    $("#quantity").val(paramArray["p"]);
+}
+
+if(paramArray["s"] != undefined || paramArray["i"] != undefined || paramArray["d"] != undefined || paramArray["p"] != undefined){
+    $('#registerModal').modal('show');
+}
 
 $('#registerModal').modal('hide');
 $('#phone').mask('(00) 90000-0000');
