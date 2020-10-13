@@ -1,8 +1,14 @@
 footer {
-  display: flex!important;
+  display: flex!important;  
   background-color: rgb(200, 200, 200);  
   padding: 60px;
   margin-top: 60px;
+}
+
+@media(max-width: 600px) {
+  footer {
+    flex-direction: column;
+  }
 }
 
 footer div{
