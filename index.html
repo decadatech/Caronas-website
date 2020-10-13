@@ -53,6 +53,7 @@
         <option value="18">Rodoviária de Boituva - SP</option>
         <option value="19">Rodoviária de Botucatu - SP</option>
       </select>
+
       <select name="i" id="indo" required>
         <option disabled value="" selected hidden>Indo para ...</option>
         <option value="1">Rodoviária de Arujá - SP</option>
@@ -75,8 +76,11 @@
         <option value="18">Rodoviária de Boituva - SP</option>
         <option value="19">Rodoviária de Botucatu - SP</option>
       </select>
+
       <input name="d" id="data" type="text" placeholder="Data e horário de Saída" class="date" required>
+
       <input name="p" id="passageiros" type="text" placeholder=" Passageiros (max: 6)" maxlength="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+      
       <button type="submit">
         <img src="assets/img/send.svg" alt="">
       </button>
