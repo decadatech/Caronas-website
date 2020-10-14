@@ -1,74 +1,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap");
 body{
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
-
-
 .banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
-    width: 100%;
-    background-image: url(../img/banner_planos.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 100%;
+  background-image: url(../img/banner_planos.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
   
-  .banner h1{
-    color: white;
-    font-size: 55px;
-    font-weight: 600;
-    text-shadow: 0px 0px 14px rgba(10, 10, 10, 1);
-  }
+.banner h1{
+  color: white;
+  font-size: 55px;
+  font-weight: 600;
+  text-shadow: 0px 0px 14px rgba(10, 10, 10, 1);
+}
 
-  section{
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-  }
+section{
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
 
-  .planos{
-    display: flex;
-    justify-content: flex-start;
-    margin: 0 auto;
-    max-width: 90vw;
-  }
-  
-  .planos .plano{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    margin: 120px 30px 30px 30px;
-    border-radius: 8px;
-    transition: 500ms;
-    box-shadow: 0px 0px 54px -22px rgba(84,84,84,1);
-    padding: 20px;
-   width: 400px;
-   max-width: 400px;
-  }
-  
-  .planos .plano img{
-    width: 80%;
-  }
-  
-  .planos .plano button{
-    background-color:  rgb(0, 132, 255);
-    border: 0;
-    border-radius: 24px;
-    color: white;
-    padding: 10px 20px 10px 20px;
-    font-size: 16px;
-    transition: 400ms;
-  }
-  
-  .planos .plano button:hover{
-    background-color:rgb(1, 115, 223);
-  }
+.planos{
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: 90vw;
+}
+
+.planos .plano{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin: 120px 30px 30px 30px;
+  border-radius: 8px;
+  transition: 500ms;
+  box-shadow: 0px 0px 54px -22px rgba(84,84,84,1);
+  padding: 20px;
+  width: 400px;
+  max-width: 400px;
+}
+
+.planos .plano img{
+  width: 80%;
+}
+
+.planos .plano button{
+  background-color:  rgb(0, 132, 255);
+  border: 0;
+  border-radius: 24px;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  font-size: 16px;
+  transition: 400ms;
+}
+
+.planos .plano button:hover{
+  background-color:rgb(1, 115, 223);
+}
