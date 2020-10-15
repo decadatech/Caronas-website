@@ -47,7 +47,7 @@
     </div>";
         
     }else {
-        echo "<h2> Não há contatos por enquanto... </h2>";
+        echo "<br/><h5> Não há contatos por enquanto... </h5>";
     }        
 
 

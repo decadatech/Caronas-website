@@ -10,7 +10,7 @@
 	if ($resultadodelete) {		
 		header ("Location: ../../../user.php");	
 	}else{			
-		echo "<h2>Erro ao excluir o usuário<h2>";
+		echo "<h5>Erro ao excluir o usuário<h5>";
 	}
 	mysqli_close($conexao);
 

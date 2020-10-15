@@ -14,7 +14,7 @@
 	if ($resultadodelete) {	
 		header ("Location: ../../../contact.php");	
 	}else{			
-		echo "<h2>Erro ao excluir o contato<h2>";
+		echo "<h5>Erro ao excluir o contato<h5>";
 	}
 
 	mysqli_close($conexao);

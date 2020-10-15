@@ -16,7 +16,7 @@
         }      
          
     }else {
-        echo "<br/><h5>Nenhum plano inserido</h5>";
+        echo "<br/><h5>Nenhuma plano inserida</h5>";
     }        
 
 

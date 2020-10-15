@@ -18,7 +18,7 @@
 	if ($resultadodelete) {		
 		unlink("../../../../assets/img/plan/".$fotoBanco);	
 	}else{			
-		echo "<h2>Erro ao excluir a plano<h2>";
+		echo "<h5>Erro ao excluir a plano<h5>";
 	}
 	mysqli_close($conexao);
 
