@@ -11,14 +11,16 @@
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <a href="work.html"><li>Trabalhe Conosco</li></a>
-			<a href="agenda.html"><li>Agendar</li></a>
-			<a href="planos.html"><li>Planos</li></a>
-			<a href="sobre.html"><li>Sobre Nós</li></a>
-			<a href="index.html"><li>Home</li></a>
-    </ul>
+  <nav class="menu maximized">
+    <button class="toggle-button" type="button" onclick="toggleNav()">
+      <i data-feather="menu"></i>
+    </button>
+
+    <a href="index.html">Home</a>
+    <a href="sobre.html">Sobre Nós</a>
+    <a href="planos.html">Planos</a>
+    <a href="agenda.html">Agendar</a>
+    <a href="work.html">Trabalhe Conosco</a>
   </nav>
 
   <div class="banner">
@@ -58,9 +60,17 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+    feather.replace()
+  </script>
+
   <!-- PLANO FUNCTIONS -->
   <script src="assets/js/planos.functions.js"></script>
   <!-- HORA FUNCTIONS -->
   <script type="text/javascript" src="assets/js/hour.functions.js"></script>
+   <!-- NAV FUNCTIONS -->
+   <script src="assets/js/nav.functions.js"></script>
 </body>
 </html>
