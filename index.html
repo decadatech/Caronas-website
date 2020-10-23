@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/css/responsive.css">
 
   <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
   <title>Bhoraaa</title>
 </head>
@@ -32,52 +33,56 @@
   <div class="banner">
     <h1>Caronas de confiança para o seu destino</h1>
 
-    <form id="cadastroForm" action="agenda.html">
-      <select name="s" id="saindo" class="first-select" required>
-        <option disabled value="" selected hidden>Saindo de ...</option>
-        <option value="1">Rodoviária de Arujá - SP</option>
-        <option value="2">Rodoviária de Mogi das Cruzes - SP</option>
-        <option value="3">Rodoviária de Suzano - SP</option>
-        <option value="4">Rodoviária de POA - SP</option>
-        <option value="5">Rodoviária de Guarulhos - SP</option>
-        <option value="6">Rodoviária de Santa Isabel - SP</option>
-        <option value="7">Rodoviária de Jacareí - SP</option>
-        <option value="8">Rodoviária de São José dos Campos - SP</option>
-        <option value="9">Rodoviária de Taubaté - SP</option>
-        <option value="10">Rodoviária de Aparecida do Norte - SP</option>
-        <option value="11">Rodoviária de Ilha bela - SP</option>
-        <option value="12">Rodoviária de Ubatuba - SP</option>
-        <option value="13">Rodoviária de Caraguatatuba - SP</option>
-        <option value="14">Rodoviária de Bertioga - SP</option>
-        <option value="15">Rodoviária de Salto - SP</option>
-        <option value="16">Rodoviária de Itu - SP</option>
-        <option value="17">Rodoviária de Sorocaba - SP</option>
-        <option value="18">Rodoviária de Boituva - SP</option>
-        <option value="19">Rodoviária de Botucatu - SP</option>
-      </select>
+    <form id="cadastroForm">
+      <!-- <select name="s" id="saindo" class="first-select" required> -->
+        <!-- <option disabled value="" selected hidden>Saindo de ...</option>
+        <option value="1">Rod. de Arujá - SP</option>
+        <option value="2">Rod. de Mogi das Cruzes - SP</option>
+        <option value="3">Rod. de Suzano - SP</option>
+        <option value="4">Rod. de POA - SP</option>
+        <option value="5">Rod. de Guarulhos - SP</option>
+        <option value="6">Rod. de Santa Isabel - SP</option>
+        <option value="7">Rod. de Jacareí - SP</option>
+        <option value="8">Rod. de São José dos Campos - SP</option>
+        <option value="9">Rod. de Taubaté - SP</option>
+        <option value="10">Rod. de Aparecida do Norte - SP</option>
+        <option value="11">Rod. de Ilha bela - SP</option>
+        <option value="12">Rod. de Ubatuba - SP</option>
+        <option value="13">Rod. de Caraguatatuba - SP</option>
+        <option value="14">Rod. de Bertioga - SP</option>
+        <option value="15">Rod. de Salto - SP</option>
+        <option value="16">Rod. de Itu - SP</option>
+        <option value="17">Rod. de Sorocaba - SP</option>
+        <option value="18">Rod. de Boituva - SP</option>
+        <option value="19">Rod. de Botucatu - SP</option> -->
+      <!-- </select>
 
       <select name="i" id="indo" required>
         <option disabled value="" selected hidden>Indo para ...</option>
-        <option value="1">Rodoviária de Arujá - SP</option>
-        <option value="2">Rodoviária de Mogi das Cruzes - SP</option>
-        <option value="3">Rodoviária de Suzano - SP</option>
-        <option value="4">Rodoviária de POA - SP</option>
-        <option value="5">Rodoviária de Guarulhos - SP</option>
-        <option value="6">Rodoviária de Santa Isabel - SP</option>
-        <option value="7">Rodoviária de Jacareí - SP</option>
-        <option value="8">Rodoviária de São José dos Campos - SP</option>
-        <option value="9">Rodoviária de Taubaté - SP</option>
-        <option value="10">Rodoviária de Aparecida do Norte - SP</option>
-        <option value="11">Rodoviária de Ilha bela - SP</option>
-        <option value="12">Rodoviária de Ubatuba - SP</option>
-        <option value="13">Rodoviária de Caraguatatuba - SP</option>
-        <option value="14">Rodoviária de Bertioga - SP</option>
-        <option value="15">Rodoviária de Salto - SP</option>
-        <option value="16">Rodoviária de Itu - SP</option>
-        <option value="17">Rodoviária de Sorocaba - SP</option>
-        <option value="18">Rodoviária de Boituva - SP</option>
-        <option value="19">Rodoviária de Botucatu - SP</option>
-      </select>
+        <option value="1">Rod. de Arujá - SP</option>
+        <option value="2">Rod. de Mogi das Cruzes - SP</option>
+        <option value="3">Rod. de Suzano - SP</option>
+        <option value="4">Rod. de POA - SP</option>
+        <option value="5">Rod. de Guarulhos - SP</option>
+        <option value="6">Rod. de Santa Isabel - SP</option>
+        <option value="7">Rod. de Jacareí - SP</option>
+        <option value="8">Rod. de São José dos Campos - SP</option>
+        <option value="9">Rod. de Taubaté - SP</option>
+        <option value="10">Rod. de Aparecida do Norte - SP</option>
+        <option value="11">Rod. de Ilha bela - SP</option>
+        <option value="12">Rod. de Ubatuba - SP</option>
+        <option value="13">Rod. de Caraguatatuba - SP</option>
+        <option value="14">Rod. de Bertioga - SP</option>
+        <option value="15">Rod. de Salto - SP</option>
+        <option value="16">Rod. de Itu - SP</option>
+        <option value="17">Rod. de Sorocaba - SP</option>
+        <option value="18">Rod. de Boituva - SP</option>
+        <option value="19">Rod. de Botucatu - SP</option>
+      </select> -->
+
+      <input name="s" size="30" placeholder=" Saindo de ..." required>
+
+      <input name="i" size="30" placeholder=" Indo para ..."  required>
 
       <input name="d" id="data" type="text" placeholder=" Data e horário de Saída" class="date" required>
 
@@ -170,6 +175,7 @@
   <!-- JQUERY -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="assets/libs/jquery.mask.js"></script>
 
   <script src="https://unpkg.com/feather-icons"></script>
