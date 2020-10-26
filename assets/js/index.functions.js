@@ -110,6 +110,14 @@ var availableTags = [
         id: 19,
         label: " Rod. de Botucatu - SP",
     },
+    {
+        id: 20,
+        label: " Rod. Tietê - SP",
+    },
+    {
+        id: 21,
+        label: " Rod. Barra Funda - SP",
+    },
 ];
 
 $( function() {    
