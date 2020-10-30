@@ -118,6 +118,10 @@ var availableTags = [
         id: 21,
         label: " Rod. Barra Funda - SP",
     },
+    {
+        id: 22,
+        label: " Rod. Bauru - SP",
+    },
 ];
 
 $( function() {    
