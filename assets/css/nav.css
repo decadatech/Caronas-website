@@ -1,65 +1,180 @@
-nav.menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: rgb(0, 132, 255);  
-  margin: 0;
-  padding: 12px 4px;
-  transition: 0.2s;
+nav {
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 5;
+  background-color: rgb(11, 97, 179);
 }
 
-button.toggle-button {
-  width: 50px;
-  height: 50px;
-  max-height: 50px;
-  background-color: transparent;
-  border: 0;
-  display: none;
-  outline: none;
+nav div.navbar {
+  overflow: hidden;
+  max-width: 1300px;
+  height: 100%;
 }
 
-button.toggle-button svg {
-  color: white;
+.navLg {
+  height: 100px;
+  transition: .5s;
 }
 
-nav.menu a {
-  margin-right: 12px;
-  font-weight: 600;
+.navSm {
+  height: 80px;
+  background: rgba(255,255,255,1);
+  transition: .5s;
+  box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.1);
+}
+
+.light-text {
+  color: #fff;
+}
+
+.dark-text {
+  color: #393E41;
+}
+
+div.navbar div {
+  flex-direction: row;
+  align-content: center;
+}
+
+div.navbar div ul {
+  width: 100%;
+  list-style: none;
+  margin: auto 50px;
+}
+
+div.navbar div ul li {
+  margin-left: 30px;
+  display: inline;
+}
+
+div.navbar div ul li a {
   text-decoration: none;
-  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  transition: .3s;
 }
 
-@media(max-width: 600px) {
-  nav.menu {
-    height: 50px;
-    padding: 0;
-    flex-direction: column;
-    align-items: flex-end;
-    background-color: rgb(0, 132, 255);  
-  }  
+div.navbar div ul li a.contact {
+  /* background-color: #13528a; */
+  background-color: #71cde9;
+  color: #1b1b1b;
+  border-radius: 6px;
+  padding: 10px 20px;
+  transition: .3s;
+}
 
-  nav.menu a {
-    display: none;
-    margin-top: 7px;
+div.navbar div ul a.central {
+  background-color: #2273b4;
+  color: white;
+  border-radius: 6px;
+  padding: 10px 10px;
+  transition: .3s;
+}
+
+div.navbar div ul li:hover a.contact {
+    color: #fff;
+    /* background-color: #011c33; */
+    background-color: #1ba7d1;
+    border: none;
+}
+
+
+div.navbar div ul li:hover a {
+  color: #ddd;
+  /* font-weight: bold; */
+}
+
+div.navbar div ul li a.active {
+  font-weight: bold;
+  transition: .3s;
+}
+
+button.button-mobile-nav {
+  color: #fff;
+  background-color: #2273b4;
+  border: none;
+  border-radius: 6px;
+  padding: 15px 25px;
+}
+
+/*mobile*/
+@media (min-width : 320px) {
+  div.itens-desktop-nav {
+      display: none;
+      background-color: transparent;
   }
 
-  button.toggle-button {
-    display: block;
+  button.button-mobile-nav {
+      display: block;
+  }
+}
+
+/*desktop*/
+@media (min-width : 780px) {
+  div.itens-desktop-nav {
+      display: flex;
   }
 
-  nav.maximized {
-    height: auto;    
+  button.button-mobile-nav {
+      display: none;
   }
+}
 
-  nav a.maximized {
-    display: block;    
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2273b4;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding: auto;
+  z-index: 99;
+}
+
+.sidenav .content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+      padding-top: 15px;
   }
-
-  nav.minimized {
-    height: 50px;    
-  }
-
-  nav a.minimized {
-    display: none;  
+  .sidenav a {
+      font-size: 18px;
   }
 }

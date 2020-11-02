@@ -29,16 +29,34 @@
 </head>
 
 <body>
-  <nav class="menu maximized">
-    <button class="toggle-button" type="button" onclick="toggleNav()">
-      <i data-feather="menu"></i>
-    </button>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="content">
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="planos.html">Planos</a>
+      <a href="work.html">Trabalhe Conosco</a>
+      <a href="agenda.html">Agendar</a>
+    </div>
+  </div>
 
-    <a href="index.html">Home</a>
-    <a href="sobre.html">Sobre Nós</a>
-    <a href="planos.html">Planos</a>
-    <a href="agenda.html">Agendar</a>
-    <a href="work.html">Trabalhe Conosco</a>
+  <nav class="navChange navLg">
+    <div class="container-fluid navbar">
+      <img src="assets/img/bhoraaa.png" height="80%" alt="Bhoraaa" />
+
+      <div class="itens-desktop-nav">
+        <ul>
+          <li><a class="light-text" href="index.html">Home</a></li>
+          <li><a class="light-text" href="sobre.html">Sobre nós</a></li>
+          <li><a class="light-text" href="planos.html">Planos</a></li>
+          <li><a class="light-text" href="work.html">Trabalhe Conosco</a></li>
+          <li><a class="contact" href="agenda.html">Agendar</a></li>
+        </ul>
+      </div>
+      <button class="btn btn-success button-mobile-nav" onclick="openNav()">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
   </nav>
 
   <div class="banner">

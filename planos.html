@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Caronas de confiança para o seu destino | Contrate caronas de forma rápida, fácil e segura">
-    <meta name="keywords" content="caronas, viagem, carona por aluguél, transporte, transporte coletivo, velocidade, segurança, confiança, van, carro">
-    <meta name="robots" content="">
-    <meta name="revisit-after" content="1 month">
-    <meta name="language" content="Portuguese">
-    <meta name="generator" content="N/A">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
-    <title>Planos - Bhoraaa</title>
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/planos.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/nav.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="description" content="Caronas de confiança para o seu destino | Contrate caronas de forma rápida, fácil e segura">
+  <meta name="keywords" content="caronas, viagem, carona por aluguél, transporte, transporte coletivo, velocidade, segurança, confiança, van, carro">
+  <meta name="robots" content="">
+  <meta name="revisit-after" content="1 month">
+  <meta name="language" content="Portuguese">
+  <meta name="generator" content="N/A">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Planos - Bhoraaa</title>
+
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/planos.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+
 </head>
+
 <body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="content">
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="planos.html">Planos</a>
+      <a href="work.html">Trabalhe Conosco</a>
+      <a href="agenda.html">Agendar</a>
+    </div>
+  </div>
 
-  <nav class="menu maximized">
-    <button class="toggle-button" type="button" onclick="toggleNav()">
-      <i data-feather="menu"></i>
-    </button>
+  <nav class="navChange navLg">
+    <div class="container-fluid navbar">
+      <img src="assets/img/bhoraaa.png" height="80%" alt="Bhoraaa" />
 
-    <a href="index.html">Home</a>
-    <a href="sobre.html">Sobre Nós</a>
-    <a href="planos.html">Planos</a>
-    <a href="agenda.html">Agendar</a>
-    <a href="work.html">Trabalhe Conosco</a>
+      <div class="itens-desktop-nav">
+        <ul>
+          <li><a class="light-text" href="index.html">Home</a></li>
+          <li><a class="light-text" href="sobre.html">Sobre nós</a></li>
+          <li><a class="active light-text" href="planos.html">Planos</a></li>
+          <li><a class="light-text" href="work.html">Trabalhe Conosco</a></li>
+          <li><a class="contact" href="agenda.html">Agendar</a></li>
+        </ul>
+      </div>
+      <button class="btn btn-success button-mobile-nav" onclick="openNav()">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
   </nav>
 
   <div class="banner">
@@ -40,16 +63,17 @@
   <footer>
     <div class="quem">
       <h2>Sobre Nós</h2>
-      <p>Nós somos uma empresa que oferece caronas compartilhadas nos estados de São Paulo e Minas Gerais, com segurança e conforto.</p>
+      <p>Nós somos uma empresa que oferece caronas compartilhadas nos estados de São Paulo e Minas Gerais, com segurança
+        e conforto.</p>
     </div>
 
     <div class="links">
       <h2>Links</h2>
       <p><a href="index.html">Home</a></p>
-			<p><a href="sobre.html">Sobre Nós</a></p>
-			<p><a href="planos.html">Planos</a></p>
-			<p><a href="agenda.html">Agendar</a></p>
-			<p><a href="work.html">Trabalhe Conosco</a></p>
+      <p><a href="sobre.html">Sobre Nós</a></p>
+      <p><a href="planos.html">Planos</a></p>
+      <p><a href="agenda.html">Agendar</a></p>
+      <p><a href="work.html">Trabalhe Conosco</a></p>
     </div>
 
     <div>
@@ -57,11 +81,12 @@
       <br>
       <p><strong>Central de Atendimento:</strong> (11) 98760-4125</p>
       <p><strong>E-mail:</strong> contato@bhoraaa.com.br</p>
-    </div>  
+    </div>
   </footer>
-            
+
   <div class="copyright">
-    <p>Copyright &copy; <span class="date-dynamic"></span><a href="https://www.decadatech.com/"> Decada Technology</a></p>
+    <p>Copyright &copy; <span class="date-dynamic"></span><a href="https://www.decadatech.com/"> Decada Technology</a>
+    </p>
   </div>
 
   <!-- JQUERY -->
@@ -78,7 +103,8 @@
   <script src="assets/js/planos.functions.js"></script>
   <!-- HORA FUNCTIONS -->
   <script type="text/javascript" src="assets/js/hour.functions.js"></script>
-   <!-- NAV FUNCTIONS -->
-   <script src="assets/js/nav.functions.js"></script>
+  <!-- NAV FUNCTIONS -->
+  <script src="assets/js/nav.functions.js"></script>
 </body>
+
 </html>
