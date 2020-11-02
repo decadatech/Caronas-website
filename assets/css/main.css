@@ -56,9 +56,11 @@ button:active {
 .banner form input {
   height: 100%;
   border: 0;
+  text-align:center;
+  border-right: 1px solid black;
 }
 
-.banner form select.first-select {
+.banner form input.first-select {
   border-radius: 12px 0 0 12px;
 }
 
