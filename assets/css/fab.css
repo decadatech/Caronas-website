@@ -1,0 +1,27 @@
+div.fab-buttons {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 10;
+}
+
+a.fab {
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  border: none;
+  z-index: 10;
+  margin-bottom: 8px;
+}
+
+a.fab img {
+  width: 60%;
+}
+
+.whatsapp {
+  background-color: #25d366;
+}
