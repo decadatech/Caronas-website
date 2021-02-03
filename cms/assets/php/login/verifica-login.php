@@ -1,6 +1,6 @@
 <?php
 	session_start();
-    include_once "../../../../assets/php/conexao.php";
+	include_once "../../../../assets/php/conexao.php";
 
 	if(empty($_POST['user']) || empty($_POST['senha'])) {
 		header('Location: ../../../login.php');
@@ -21,20 +21,22 @@
 			$loginbd = $linha["tb01_usuario"];
 			$senhabd = $linha["tb01_senha"];
 			$ativo = $linha["tb01_ativo"];
+			$categoria = $linha["tb01_categoria"];
 
-	        if($usuario == $loginbd && $senhaHash == $senhabd){
-				if($ativo == 1){
-					echo 1;
-					$_SESSION["logado"] = 1;    
-					$_SESSION["nome"] = $loginbd;                            
-					// header("Location:../../index.php");
-					exit();
-				}else{
-					echo 2;
-					$_SESSION['nao_autenticado'] = true;
-					exit();
+				if($usuario == $loginbd && $senhaHash == $senhabd){
+					if($ativo == 1){
+						echo 1;
+						$_SESSION["logado"] = 1;    
+						$_SESSION["nome"] = $loginbd;   
+						$_SESSION["categoria"] = $categoria;                       
+						// header("Location:../../index.php");
+						exit();
+					}else{
+						echo 2;
+						$_SESSION['nao_autenticado'] = true;
+						exit();
+					}
 				}
-			}
     	}
     }else{
         echo 0;

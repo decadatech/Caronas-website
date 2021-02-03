@@ -20,7 +20,12 @@
                     </thead>
                     <tbody>";
 
-        while ($linha = $result->fetch_assoc()){     
+        while ($linha = $result->fetch_assoc()){
+            $horaV = "Sem Volta";
+            if(!is_null($linha["tb03_hora_volta"])){
+                $horaV = date("d/m/Y H:i:s", strtotime($linha["tb03_hora_saida"]));
+            }
+
             echo "<tr>";
                 echo "<td>".$linha["tb03_nome"]."</td>";
                 echo "<td>".$linha["tb03_telefone"]."</td>";
@@ -34,6 +39,7 @@
                         data-estadoC='".$linha["tb03_estado_chegada"]."'
                         data-cidadeC='".$linha["tb03_cidade_chegada"]."'
                         data-horaS='".date("d/m/Y H:i:s", strtotime($linha["tb03_hora_saida"]))."'
+                        data-horaV='".$horaV."'
                         data-quant='".$linha["tb03_quant_passageiro"]."'
                         data-desc='".$linha["tb03_observacoes"]."'> Informações </button>";
                 echo    "<button href = 'javascript:func()'onclick='confirmarExclusaoContact(".$linha["tb03_id"].")' class='btn btn-danger' style='margin:0 2px 2px 0'> Excluir </a></button>";

@@ -42,7 +42,11 @@
         <label for="senha">Senha*</label>
         <input type="password" name="senha" id="senha" class="form-control" required>
       </div>
-      <button type="submit"  class="btn btn-primary"> Registrar </button>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="adm">
+        <label class="form-check-label" for="adm">Usuário administrador?</label>
+      </div>
+      <button type="submit"  class="btn btn-primary" style="margin-top: 10px"> Registrar </button>
     </form>
     <a href="login.php">Faça seu login</a>
 

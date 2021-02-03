@@ -27,25 +27,8 @@
       <div style="display: flex; justify-content: center; align-items: center; padding: 30px auto; margin: 15px auto;">
         <h3>Páginas</h3>
       </div>
-      <div class="list-group list-group-flush">
-        <a href="index.php" class="list-group-item list-group-item-action">
-          HOME
-        </a>
-        <a href="plans.php" class="list-group-item list-group-item-action">
-          PLANOS
-        </a> 
-        <a href="about.php" class="list-group-item list-group-item-action">
-          SOBRE NÓS
-        </a>
-        <a href="work.php" class="list-group-item list-group-item-action">
-          TRABALHE CONOSCO
-        </a> 
-        <a style="background-color: #242424; color: white" href="contact.php" class="list-group-item list-group-item-action">
-          CONTATO
-        </a> 
-        <a href="user.php" class="list-group-item list-group-item-action">
-          USUÁRIO
-        </a>
+      <div class="list-group list-group-flush ajax-reponse-select-menu">
+        
       </div>
     </div>
     <!-- Page Content -->
@@ -88,7 +71,7 @@
                 </div>
                 <div class="form-row">              
                     <div class="form-group col-md-6">
-                        <label for="view-horario"><b>Horário</b></label>
+                        <label for="view-horario"><b>Horário Saída</b></label>
                         <p id="view-horario"></p>
                     </div>
                     <div class="form-group col-md-6">
@@ -101,7 +84,13 @@
                         <label for="view-desc"><b>Observações</b></label>
                         <p id="view-desc"></p>
                     </div>               
-                </div>                                                             
+                </div>
+                <div class="form-row" style="border-top: 1px solid black">                 
+                    <div class="form-group col-md-12">
+                        <label for="view-desc"><b>Horário Volta</b></label>
+                        <p id="view-volta"></p>
+                    </div>               
+                </div>
             </div>
             <div class="modal-footer">                         
                 <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">Fechar</button>
@@ -117,6 +106,8 @@
   <script src="../assets/libs/bootstrap/js/bootstrap.min.js"></script>
   <!-- CONTACT JS  -->
   <script src="assets/js/contactCMS.js"></script>
+  <!-- MENU JS -->
+  <script src="assets/js/menuCMS.js"></script>
 
   <script>
     $(document).ready(function() {

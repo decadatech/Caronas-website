@@ -2,6 +2,8 @@
   include_once "../assets/php/conexao.php";
   include_once "assets/php/login/verificado-login.php";
   date_default_timezone_set('America/Sao_Paulo');
+
+  if($_SESSION["categoria"] == 1){
 ?>
 
 <html>
@@ -29,25 +31,8 @@
       <div style="display: flex; justify-content: center; align-items: center; padding: 30px auto; margin: 15px auto;">
         <h3>Páginas</h3>
       </div>
-      <div class="list-group list-group-flush">
-        <a href="index.php" class="list-group-item list-group-item-action">
-          HOME
-        </a>
-        <a href="plans.php" class="list-group-item list-group-item-action">
-          PLANOS
-        </a>
-        <a style="background-color: #242424; color: white" href="about.php" class="list-group-item list-group-item-action">
-          SOBRE NÓS
-        </a>
-        <a href="work.php" class="list-group-item list-group-item-action">
-          TRABALHE CONOSCO
-        </a> 
-        <a href="contact.php" class="list-group-item list-group-item-action">
-          CONTATO
-        </a>
-        <a href="user.php" class="list-group-item list-group-item-action">
-          USUÁRIO
-        </a>
+      <div class="list-group list-group-flush ajax-reponse-select-menu">
+        
       </div>
     </div>
     <!-- Page Content -->
@@ -116,6 +101,8 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <!-- INDEX JS -->
   <script src="assets/js/aboutCMS.js"></script>
+  <!-- MENU JS -->
+  <script src="assets/js/menuCMS.js"></script>
 
   <script>
     $(document).ready(function() {
@@ -129,3 +116,9 @@
 </body>
 
 </html>
+
+<?php
+  }else{
+    header('Location: contact.php');
+  }
+?>

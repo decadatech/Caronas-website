@@ -11,6 +11,7 @@ function viewContact(id) {
 
     $('#ModalLabel').html($(buttonIdContact).data('nome'));
     $('#view-horario').html($(buttonIdContact).data('horas'));
+    $('#view-volta').html($(buttonIdContact).data('horav'));
     $('#view-quant').html($(buttonIdContact).data('quant') + " passageiros");
     $('#view-desc').html($(buttonIdContact).data('desc'));
     $('#view-saida').html($(buttonIdContact).data('cidades') + "/" + $(buttonIdContact).data('estados'));    

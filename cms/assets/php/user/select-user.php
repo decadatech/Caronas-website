@@ -11,7 +11,8 @@
                     <table class='table mb-0'>
                     <thead class='bg-light'>
                         <tr>
-                        <th scope='col' class='border-0'>Nome</th>                        
+                        <th scope='col' class='border-0'>Nome</th>
+                        <th scope='col' class='border-0'>Categoria</th>
                         <th scope='col' class='border-0'>Ações</th>
                         </tr>
                     </thead>
@@ -21,6 +22,11 @@
             if($_SESSION["nome"] != $linha["tb01_usuario"]){         
                 echo "<tr>";
                     echo "<td>".$linha["tb01_usuario"]."</td>";
+                    if($linha["tb01_categoria"] == 0){
+                        echo "<td>Normal</td>";
+                    }else{
+                        echo "<td>Administrador</td>";
+                    }
                     echo "<td>"; 
                     if($linha["tb01_ativo"] == 0){
                         echo    "<button href = 'javascript:func()'onclick='confirmarDarUser(".$linha["tb01_id"].")' class='btn btn-success' style='margin:2px;'> Dar permissão </a></button>";

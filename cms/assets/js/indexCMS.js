@@ -12,4 +12,4 @@ $(document).on('click', '.limited', function(){
        this.checked = false;
        alert('Limite atingido');
     }
- });
+});
