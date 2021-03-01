@@ -24,6 +24,15 @@ footer .links a{
   font-weight: 700;
 }
 
+#icons > a {
+  margin-right: 5px;
+}
+
+#icons a {
+  outline: none;
+  text-decoration: none;
+  color: #212529;
+}
 
 .copyright {
   height: 10vh;
