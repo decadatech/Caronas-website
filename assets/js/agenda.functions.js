@@ -36,10 +36,10 @@ for(var i=0; i<params.length; i++) {
 // });
 
 if(paramArray["s"] != undefined){
-    $("select[name='cidade0']").val(paramArray["s"]);
+    $("#cidade0").val(decodeURIComponent(paramArray["s"]));
 }
 if(paramArray["i"] != undefined){
-    $("select[name='cidade1']").val(paramArray["i"]);
+    $("#cidade1").val(decodeURIComponent(paramArray["i"]));
 }
 if(paramArray["d"] != undefined){
     var data = paramArray["d"].split('%2F').join('/');
@@ -105,7 +105,7 @@ const calendar = new FullCalendar.Calendar(calendarEl, {
         //evento disparado ao redimencionar o evento (update de data)        
     },
     eventClick: function (info) {    
-        alert('0');      
+        // alert('0');
     },
     eventRender: function(event, element) {
         $(element).addTouch();
@@ -116,8 +116,8 @@ calendar.render();
 
 $('#registerModal').on('hidden.bs.modal', function (e) {
     $('#registerModal input').val('');
-    $("select[name='estado0']").val(0);
-    $("select[name='estado1']").val(0);
+    // $("select[name='estado0']").val(0);
+    // $("select[name='estado1']").val(0);
     $('#registerModal textarea').val('');
 });
 
@@ -132,10 +132,10 @@ $("#quantity").keyup(function () {
 });
 
 $('#scheduleForm').submit(function (event) {
-    var valor1 = $("select[name='cidade0']").find(":selected").html();
-    var valor2 = $("select[name='cidade1']").find(":selected").html();
-    $("select[name='cidade0']").find(":selected").val(valor1);
-    $("select[name='cidade1']").find(":selected").val(valor2);
+    // var valor1 = $("select[name='cidade0']").find(":selected").html();
+    // var valor2 = $("select[name='cidade1']").find(":selected").html();
+    // $("select[name='cidade0']").find(":selected").val(valor1);
+    // $("select[name='cidade1']").find(":selected").val(valor2);
     event.preventDefault();
     var formData = new FormData(this);
     $.ajax({
@@ -147,7 +147,7 @@ $('#scheduleForm').submit(function (event) {
         success: function (result) {                
             $('#scheduleForm input').val(''); //LIMPA OS INPUTS 
             $('#scheduleForm textarea').val(''); //LIMPA OS INPUTS 
-            $("#scheduleForm select").val(0);
+            // $("#scheduleForm select").val(0);
             $('checkBack').prop("checked", false);
             $('#registerModal').modal('hide'); //ABRE O MODAL             
             $('#confirmModal').modal('show'); //ABRE O MODAL             
@@ -156,7 +156,7 @@ $('#scheduleForm').submit(function (event) {
             $('#scheduleForm input').val(''); //LIMPA OS INPUTS 
             $('checkBack').prop("checked", false);
             $('#scheduleForm textarea').val(''); //LIMPA OS INPUTS 
-            $("#scheduleForm select").val(0);
+            // $("#scheduleForm select").val(0);
         },           
     });
 });

@@ -34,9 +34,7 @@
                 echo "<td>";
                 echo    "<button href = 'javascript:func()'onclick='viewContact(".$linha["tb03_id"].")' class='btn btn-info' style='margin:0 2px 2px 0' id='".$linha["tb03_id"]."'
                         data-nome='".$linha["tb03_nome"]."'
-                        data-estadoS='".$linha["tb03_estado_saida"]."'
                         data-cidadeS='".$linha["tb03_cidade_saida"]."'
-                        data-estadoC='".$linha["tb03_estado_chegada"]."'
                         data-cidadeC='".$linha["tb03_cidade_chegada"]."'
                         data-horaS='".date("d/m/Y H:i:s", strtotime($linha["tb03_hora_saida"]))."'
                         data-horaV='".$horaV."'

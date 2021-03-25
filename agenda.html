@@ -163,8 +163,9 @@
                 <b>Saída</b>
               </div>              
               <div class="form-group col-md-10">
-                <label>Cidade</label>
-                <select class="form-control" name="cidade0" id="cidade0" required>
+                <label>Cidade - Estado</label>
+                <input type="text" class="form-control" name="cidade0" id="cidade0" autocomplete="off" required>
+                <!-- <select class="form-control" name="cidade0" id="cidade0" required>
                   <option value="1">Rod. de Arujá - SP</option>
                   <option value="2">Rod. de Mogi das Cruzes - SP</option>
                   <option value="3">Rod. de Suzano - SP</option>
@@ -187,7 +188,7 @@
                   <option value="20">Rod. Tietê - SP</option>
                   <option value="21">Rod. Barra Funda - SP</option>
                   <option value="22">Rod. Bauru - SP</option>
-                </select>
+                </select> -->
               </div>
             </div>
             <div class="form-row">
@@ -195,8 +196,9 @@
                 <b>Para</b>
               </div>              
               <div class="form-group col-md-10">
-                <label>Cidade</label>
-                <select class="form-control" name="cidade1" id="cidade1" required>
+                <label>Cidade - Estado</label>
+                <input type="text" class="form-control" name="cidade1" id="cidade1" autocomplete="off" required>
+                <!-- <select class="form-control" name="cidade1" id="cidade1" required>
                   <option value="1">Rod. de Arujá - SP</option>
                   <option value="2">Rod. de Mogi das Cruzes - SP</option>
                   <option value="3">Rod. de Suzano - SP</option>
@@ -219,19 +221,19 @@
                   <option value="20">Rod. Tietê - SP</option>
                   <option value="21">Rod. Barra Funda - SP</option>
                   <option value="22">Rod. Bauru - SP</option>
-                </select>
+                </select> -->
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-12">
                 <label>Nome</label>
-                <input type="text" class="form-control" name="name" id="name" required>
+                <input type="text" class="form-control" name="name" id="name" autocomplete="off" required>
               </div>              
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label>Telefone</label>
-                <input type="tel" class="form-control" name="phone" id="phone" required>
+                <input type="tel" class="form-control" name="phone" id="phone" autocomplete="off" required>
               </div>
               <div class="form-group col-md-6">
                 <label>Saída</label>
@@ -258,19 +260,19 @@
               </div>
               <div class="form-group col-md-2">
                 <input type="text" maxlength="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
-                  class="form-control" name="quantity" id="quantity" required>
+                  autocomplete="off" class="form-control" name="quantity" id="quantity" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-12">
                 <label>E-mail</label>
-                <input type="text" class="form-control" name="email" id="email" required>
+                <input type="email" class="form-control" name="email" id="email" autocomplete="off" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-12">
                 <textarea type="text" class="form-control" name="description" id="description"
-                  placeholder="Observações (Quantidade de bagagens)"></textarea>
+                  placeholder="Observações (Quantidade de bagagens)" autocomplete="off"></textarea>
               </div>
             </div>
           </div>

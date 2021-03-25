@@ -14,8 +14,8 @@ function viewContact(id) {
     $('#view-volta').html($(buttonIdContact).data('horav'));
     $('#view-quant').html($(buttonIdContact).data('quant') + " passageiros");
     $('#view-desc').html($(buttonIdContact).data('desc'));
-    $('#view-saida').html($(buttonIdContact).data('cidades') + "/" + $(buttonIdContact).data('estados'));    
-    $('#view-chegada').html($(buttonIdContact).data('cidadec') + "/" + $(buttonIdContact).data('estadoc'));    
+    $('#view-saida').html($(buttonIdContact).data('cidades'));    
+    $('#view-chegada').html($(buttonIdContact).data('cidadec'));    
 
     $('#ModalViewContact').modal('show'); //ABRE O MODAL
 
