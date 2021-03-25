@@ -5,6 +5,10 @@ nav {
   background-color: rgb(11, 97, 179);
 }
 
+#navLogo {
+  cursor: pointer;
+}
+
 nav div.navbar {
   overflow: hidden;
   max-width: 1300px;
