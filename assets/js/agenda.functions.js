@@ -95,7 +95,7 @@ const calendar = new FullCalendar.Calendar(calendarEl, {
     select: function(info) {            
         // Evento disparado ao selecionar um dia
         // $('#registerModal #start').val(info.start.toLocaleString());
-        $('#registerModal #end').val(info.end.toLocaleString());
+        $('#registerModal #end').val(info.end.toLocaleString().slice(0, 16));
         $('#registerModal').modal('show');
     },
     eventDrop: function (info) {     

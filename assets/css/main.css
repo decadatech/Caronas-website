@@ -96,18 +96,19 @@ button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: white;
   margin: 120px 30px 30px 30px;
   border-radius: 8px;
   transition: 500ms;
   box-shadow: 0px 0px 54px -22px rgba(84,84,84,1);
   padding: 20px;
+  min-height: 450px;
   max-width: 500px;
 }
 
 .planos .plano h4 {
-  margin-bottom: 16px;
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .planos .plano img {
@@ -115,7 +116,7 @@ button:active {
 }
 
 .planos .plano p {
-  margin: 16px auto;
+  margin-top: 10px;
 }
 
 .planos .plano button {
@@ -146,7 +147,6 @@ button:active {
   color:  white;
   background-color: rgb(0, 132, 255);;
   font-weight: 600;
-  margin-right: 40px;
   font-size: 16px;
   padding: 12px;
   border-radius: 24px;
