@@ -72,6 +72,14 @@ $("#checkBack").click(function(){
     }
 });
 
+function enableBack(){
+    $('.divBackButton').show();         
+}
+
+function disableBack(){
+    $('.divBackButton').hide();         
+}
+
 const calendarEl = document.getElementById('calendar');
 
 const calendar = new FullCalendar.Calendar(calendarEl, {

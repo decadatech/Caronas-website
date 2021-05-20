@@ -26,7 +26,11 @@
                 $horaV = date("d/m/Y H:i:s", strtotime($linha["tb03_hora_saida"]));
             }
 
-            echo "<tr>";
+            if($linha["tb03_tipo_servico"] == 1){
+                echo "<tr style='background-color: lightblue;'>";
+            }else{
+                echo "<tr>";
+            }
                 echo "<td>".$linha["tb03_nome"]."</td>";
                 echo "<td>".$linha["tb03_telefone"]."</td>";
                 echo "<td>".$linha["tb03_email"]."</td>";
